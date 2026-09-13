@@ -1,8 +1,8 @@
-interface FinalCTAProps {
+interface CTAProps {
   className?: string
 }
 
-export function FinalCTA({ className = "" }: FinalCTAProps) {
+export function CTA({ className = "" }: CTAProps) {
   return (
     <div className={className}>
       <p className="font-retro text-arcade-muted">{"CTA"}</p>

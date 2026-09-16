@@ -1,12 +1,11 @@
-import { CTA } from "./components/CTA"
-import { Footer } from "./components/Footer"
-import { Hero } from "./components/Hero"
-
+import { CTA } from './sections/CTA'
+import { Footer } from './sections/Footer'
+import { Hero } from './sections/Hero'
 
 export default function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <Hero />    
+      <Hero />
       <CTA />
       <Footer />
     </div>

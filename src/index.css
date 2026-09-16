@@ -1,8 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
- 
-}
+  --font-retro: 'Press Start 2P', 'VT323', monospace;
+  --font-terminal: 'VT323', monospace;
 
+  --color-arcade-950: #07070d;
+  --color-arcade-900: #10101c;
+  --color-arcade-800: #1a1a2c;
+  --color-arcade-700: #262640;
+
+  --color-arcade-muted: #7d7da1;
+  --color-arcade-ghost: #ececf6;
+
+  --color-arcade-primary: #f43f5e;
+  --color-arcade-secondary: #22d3ee;
+  --color-arcade-accent: #eab308;
+  --color-arcade-neon: #a3e635;
+}

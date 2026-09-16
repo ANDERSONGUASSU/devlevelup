@@ -9,13 +9,13 @@ O projeto usa **Tailwind CSS v4** (utilitário-first, via plugin do Vite). Cores
 
 ## Tokens disponíveis (`@theme`)
 
-- Fontes: `font-retro` (Press Start 2P), `font-terminal` (VT323).
+- Fontes: `font-sans` (Funnel Sans), `font-display` (Funnel Display).
 - Cores `--color-arcade-*`: `950/900/800/700` (fundos), `muted`, `ghost`, `primary`, `secondary`, `accent`, `neon`.
 
 Exemplos de uso:
 
 ```tsx
-className = 'bg-arcade-900 font-retro text-arcade-muted'
+className = 'bg-arcade-900 font-display text-arcade-muted'
 className = 'text-arcade-primary hover:text-arcade-secondary'
 ```
 

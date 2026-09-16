@@ -49,7 +49,7 @@ Mensagens em português, descritivas. Um commit = uma mudança coesa.
 
 - Prettier (`.prettierrc`): sem `;`, aspas simples, trailing comma
 - Utilidades com conflito de classe: usar `cn()` de `src/lib/utils.ts`
-- Usar tokens do Tailwind `@theme` (`--color-arcade-*`, `--font-retro`), **não** cores/fontes hardcoded
+- Usar tokens do Tailwind `@theme` (`--color-arcade-*`, `--font-sans`/`--font-display`), **não** cores/fontes hardcoded
 - `sections/` exportam só componentes (regra react-refresh) — constantes/variants fora do arquivo ou em `src/data/`
 
 ## Dependências

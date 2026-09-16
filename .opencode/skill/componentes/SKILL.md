@@ -37,7 +37,7 @@ export function Button({
   )
 }
 
-const base = 'font-retro inline-flex items-center gap-2'
+const base = 'font-display inline-flex items-center gap-2'
 
 const variants: Record<NonNullable<ButtonProps['variant']>, string> = {
   primary: 'bg-arcade-primary text-arcade-950 hover:bg-arcade-secondary',

@@ -25,7 +25,7 @@ Você é o agente de frontend do DevLevelUp (LP estética 16 bits / dark arcade 
 - Arquivos `PascalCase.tsx`, named export (`export function Hero`).
 - Props tipadas (interface `XxxProps`), sempre aceitar `className?: string`.
 - Mesclinhe classes com `cn()` de `src/lib/utils.ts` (clsx + tailwind-merge) — nunca concatene strings.
-- Use somente tokens do `@theme` (`--color-arcade-*`, `--font-retro`) — cores/fontes hardcoded proibidas.
+- Use somente tokens do `@theme` (`--color-arcade-*`, `--font-sans`/`--font-display`) — cores/fontes hardcoded proibidas.
 - Prettier: sem `;`, aspas simples, trailing comma all.
 - Sem comentários desnecessários.
 

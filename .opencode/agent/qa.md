@@ -12,7 +12,7 @@ Você é o QA do DevLevelUp. Você **veta ou libera** cada PR usando o preview d
 
 1. **Build e lint**: `npm run lint`, `npm run format:check` e `npm run build` devem passar.
 2. **Preview da Vercel**: navegue pelas seções (Hero, CTA, Footer) e confira:
-   - Aparência/consistência com a estética dark arcade 16 bits (tokens `--color-arcade-*`, `--font-retro`).
+   - Aparência/consistência com a estética dark arcade 16 bits (tokens `--color-arcade-*`, `--font-sans`/`--font-display`).
    - Responsividade (mobile, tablet, desktop), sem overflow quebrado.
    - Interações (hover/transições de `Button`, etc.) funcionando.
 3. **Consistência visual**: classes de layout/cores vêm dos tokens; nada fora de estilo com o resto da LP.

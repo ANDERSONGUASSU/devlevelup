@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import '@fontsource/funnel-sans/latin-400.css';
+@import '@fontsource/funnel-sans/latin-500.css';
+@import '@fontsource/funnel-sans/latin-600.css';
+@import '@fontsource/funnel-sans/latin-700.css';
+@import '@fontsource/funnel-display/latin-400.css';
+@import '@fontsource/funnel-display/latin-500.css';
+@import '@fontsource/funnel-display/latin-600.css';
+@import '@fontsource/funnel-display/latin-700.css';
 
 @import 'tailwindcss';
 
 @theme {
-  --font-retro: 'Press Start 2P', 'VT323', monospace;
-  --font-terminal: 'VT323', monospace;
+  --font-sans:
+    'Funnel Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display:
+    'Funnel Display', 'Funnel Sans', ui-sans-serif, system-ui, sans-serif;
 
   --color-arcade-950: #07070d;
   --color-arcade-900: #10101c;

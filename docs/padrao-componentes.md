@@ -25,7 +25,7 @@ Como criar e estruturar componentes no DevLevelUp.
    }
    ```
 2. **`className` sobrescrevível**: sempre aceitar `className?: string` e mesclar com `cn()` de `src/lib/utils.ts` — nunca concatenar strings de classe.
-3. **Tokens do `@theme`**: `--color-arcade-*`, `--font-retro`, etc. Cores/fontes hardcoded são proibidas.
+3. **Tokens do `@theme`**: `--color-arcade-*`, `--font-sans`/`--font-display`, etc. Cores/fontes hardcoded são proibidas.
 4. **Sem comentários** desnecessários; deixe o código explicar.
 5. Sempre seguir Prettier (sem `;`, aspas simples); `npm run format` antes de terminar.
 
@@ -50,7 +50,7 @@ export function Button({
     <button
       type="button"
       className={cn(
-        'inline-flex items-center justify-center gap-2 font-retro',
+        'inline-flex items-center justify-center gap-2 font-display',
         variants[variant],
         sizes[size],
         className,

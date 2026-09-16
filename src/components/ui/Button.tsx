@@ -16,7 +16,7 @@ export function Button({
     <button
       type="button"
       className={cn(
-        'inline-flex items-center justify-center gap-2 font-retro uppercase tracking-wider transition-colors after:block after:h-0.5 focus:outline-none',
+        'inline-flex items-center justify-center gap-2 font-display uppercase tracking-wider transition-colors after:block after:h-0.5 focus:outline-none',
         variantClasses[variant],
         sizeClasses[size],
         className,

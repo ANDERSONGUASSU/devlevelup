@@ -5,7 +5,7 @@ interface CTAProps {
 export function CTA({ className = '' }: CTAProps) {
   return (
     <div className={className}>
-      <p className="font-retro text-arcade-muted">{'CTA'}</p>
+      <p className="font-display text-arcade-muted">{'CTA'}</p>
     </div>
   )
 }

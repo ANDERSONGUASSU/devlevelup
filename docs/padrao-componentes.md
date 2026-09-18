@@ -29,6 +29,12 @@ Como criar e estruturar componentes no DevLevelUp.
 4. **Sem comentários** desnecessários; deixe o código explicar.
 5. Sempre seguir Prettier (sem `;`, aspas simples); `npm run format` antes de terminar.
 
+## Ícones SVG
+
+- **Nunca** criar SVG inline dentro de um componente/seção.
+- Todo ícone fica em `src/components/ui/icons.tsx`, com **named export** (`export function MenuIcon`), aceitando `className?: string`.
+- O consumidor controla tamanho/cor via `className` (ex.: `<MenuIcon className="h-6 w-6" />`); a cor vem de `currentColor`.
+
 ## Exemplo — `Button.tsx`
 
 ```tsx

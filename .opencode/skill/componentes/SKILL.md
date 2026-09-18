@@ -52,3 +52,4 @@ const variants: Record<NonNullable<ButtonProps['variant']>, string> = {
 2. Estilos repetidos em 2+ lugares → subir para um primitivo `ui/`, token ou constante — não duplicar.
 3. Toda classe usa tokens do `@theme`; sem hex/font hardcoded.
 4. Rodar `npm run format` antes de terminar.
+5. **Ícones SVG nunca inline** em componentes/seções — criar em `src/components/ui/icons.tsx` com named export e `className?: string` (tamanho/cor controlados pelo consumidor via `className`; cor via `currentColor`).

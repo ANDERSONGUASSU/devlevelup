@@ -2,6 +2,7 @@
 @import '@fontsource/funnel-sans/latin-500.css';
 @import '@fontsource/funnel-sans/latin-600.css';
 @import '@fontsource/funnel-sans/latin-700.css';
+@import '@fontsource/funnel-sans/latin-800.css';
 @import '@fontsource/funnel-display/latin-400.css';
 @import '@fontsource/funnel-display/latin-500.css';
 @import '@fontsource/funnel-display/latin-600.css';
@@ -27,4 +28,19 @@
   --color-arcade-secondary: #22d3ee;
   --color-arcade-accent: #eab308;
   --color-arcade-neon: #a3e635;
+
+  --color-arcade-cyan: #00f0ff;
+  --color-arcade-purple: #9d00ff;
+  --color-arcade-yellow: #fddf01;
+  --color-arcade-yellow-shadow: #ffb800;
+  --color-arcade-text-secondary: #a3a3c2;
+
+  --color-arcade-surface: #ffffff;
+  --color-arcade-surface-variant: #eaddff;
+  --color-arcade-on-surface: #1c1b1f;
+  --color-arcade-on-surface-variant: #49454f;
+  --color-arcade-outline: #cac4d0;
+  --color-arcade-m3-primary: #6750a4;
+
+  --shadow-arcade-glow: 0 0 8px rgba(0, 240, 255, 0.25);
 }

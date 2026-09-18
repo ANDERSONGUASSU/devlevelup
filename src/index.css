@@ -7,6 +7,13 @@
 @import '@fontsource/funnel-display/latin-500.css';
 @import '@fontsource/funnel-display/latin-600.css';
 @import '@fontsource/funnel-display/latin-700.css';
+@import '@fontsource/press-start-2p/latin-400.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/inter/latin-800.css';
+@import '@fontsource/inter/latin-900.css';
+@import '@fontsource/roboto-flex/latin-400.css';
 
 @import 'tailwindcss';
 
@@ -15,6 +22,9 @@
     'Funnel Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display:
     'Funnel Display', 'Funnel Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: 'Press Start 2P', 'Courier New', monospace;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-roboto-flex: 'Roboto Flex', system-ui, -apple-system, sans-serif;
 
   --color-arcade-950: #07070d;
   --color-arcade-900: #10101c;
@@ -42,5 +52,18 @@
   --color-arcade-outline: #cac4d0;
   --color-arcade-m3-primary: #6750a4;
 
+  --color-arcade-background: #05050d;
+  --color-arcade-glow: #0d1f5c;
+  --color-arcade-cta-text: #0a0e2a;
+  --color-arcade-divider: #1e3a5f;
+  --color-arcade-level: #0d1a3e;
+  --color-arcade-white: #ffffff;
+  --color-arcade-scene-overlay: rgba(6, 11, 31, 0.15);
+
   --shadow-arcade-glow: 0 0 8px rgba(0, 240, 255, 0.25);
+  --shadow-arcade-cta: 0 4px 16px rgba(253, 223, 1, 0.4);
+  --shadow-arcade-badge: 0 0 12px rgba(0, 240, 255, 0.4);
+  --shadow-arcade-level: 0 0 10px rgba(253, 223, 1, 0.4);
+
+  --text-shadow-arcade-title: 0 0 20px rgba(0, 240, 255, 0.5);
 }

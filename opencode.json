@@ -3,16 +3,9 @@
   "mcp": {
     "figma": {
       "type": "local",
-      "command": [
-        "sh",
-        "-c",
-        "npx -y figma-developer-mcp --figma-api-key=\"$(sed -n 's/^TOKEN_FIGMA=//p' .env)\" --stdio"
-      ],
+      "command": ["node", ".opencode/mcp/figma.mjs"],
       "cwd": ".",
-      "enabled": true,
-      "environment": {
-        "FIGMA_API_KEY": ""
-      }
+      "enabled": true
     }
   }
 }

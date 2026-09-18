@@ -6,17 +6,17 @@
 
 Padronizar a infraestrutura de desenvolvimento do DevLevelUp (LP estética 16 bits / dark arcade para o Hackathon SouJunior) para que os desenvolvedores do time utilizem as mesmas regras de:
 
-* Formatação de código
-* ESLint
-* TypeScript
-* Git
-* Commits
-* Pre-commit hooks
-* Node.js
-* OpenCode
-* Agentes
-* Skills
-* Workflows
+- Formatação de código
+- ESLint
+- TypeScript
+- Git
+- Commits
+- Pre-commit hooks
+- Node.js
+- OpenCode
+- Agentes
+- Skills
+- Workflows
 
 A implementação deve preservar o funcionamento atual do projeto.
 
@@ -28,16 +28,16 @@ A implementação deve preservar o funcionamento atual do projeto.
 
 O agente deve:
 
-* Analisar a estrutura existente antes de modificar arquivos.
-* Reutilizar configurações existentes quando possível.
-* Evitar substituir configurações funcionais sem necessidade.
-* Não alterar componentes, páginas ou funcionalidades apenas para adequá-los ao novo padrão.
-* Não realizar refatorações fora do escopo desta spec.
-* Não atualizar dependências sem necessidade.
-* Não alterar a arquitetura do projeto.
-* Não remover configurações existentes sem verificar seu impacto.
-* Se encontrar um conflito entre uma configuração existente e esta spec, identificar o conflito e escolher a solução que preserve o funcionamento do projeto.
-* Ao final, informar todas as alterações realizadas.
+- Analisar a estrutura existente antes de modificar arquivos.
+- Reutilizar configurações existentes quando possível.
+- Evitar substituir configurações funcionais sem necessidade.
+- Não alterar componentes, páginas ou funcionalidades apenas para adequá-los ao novo padrão.
+- Não realizar refatorações fora do escopo desta spec.
+- Não atualizar dependências sem necessidade.
+- Não alterar a arquitetura do projeto.
+- Não remover configurações existentes sem verificar seu impacto.
+- Se encontrar um conflito entre uma configuração existente e esta spec, identificar o conflito e escolher a solução que preserve o funcionamento do projeto.
+- Ao final, informar todas as alterações realizadas.
 
 ---
 
@@ -45,16 +45,16 @@ O agente deve:
 
 A infraestrutura deve considerar o stack atual do projeto:
 
-* React 19
-* TypeScript
-* Vite
-* Tailwind CSS v4
-* ESLint
-* Prettier
-* Git
-* Husky (❌ a adicionar)
-* Node.js
-* OpenCode
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- ESLint
+- Prettier
+- Git
+- Husky (❌ a adicionar)
+- Node.js
+- OpenCode
 
 Não adicionar frameworks ou bibliotecas desnecessárias.
 
@@ -84,25 +84,25 @@ Executar as tarefas nesta ordem:
 
 Análise realizada em 18/09/2026. Nada foi modificado durante esta etapa.
 
-| Item | Situação |
-| --- | --- |
-| Package manager | ✅ **npm** (`package-lock.json` commitado) |
-| Versão do Node | ✅ v24.21.0 local; CI usa `node-version: 24` |
-| Versão do React | ✅ `^19.2.8` |
-| Versão do TypeScript | ✅ `~6.0.2` |
-| Configuração do ESLint | ✅ `eslint.config.js` (flat config) |
-| Configuração do Prettier | ✅ `.prettierrc` + `.prettierignore` |
-| `.editorconfig` | ❌ não existe |
-| Husky | ❌ não existe |
-| Git hooks | ❌ apenas os `.sample` do `git init` |
+| Item                      | Situação                                                                                |
+| ------------------------- | --------------------------------------------------------------------------------------- |
+| Package manager           | ✅ **npm** (`package-lock.json` commitado)                                              |
+| Versão do Node            | ✅ v24.21.0 local; CI usa `node-version: 24`                                            |
+| Versão do React           | ✅ `^19.2.8`                                                                            |
+| Versão do TypeScript      | ✅ `~6.0.2`                                                                             |
+| Configuração do ESLint    | ✅ `eslint.config.js` (flat config)                                                     |
+| Configuração do Prettier  | ✅ `.prettierrc` + `.prettierignore`                                                    |
+| `.editorconfig`           | ❌ não existe                                                                           |
+| Husky                     | ❌ não existe                                                                           |
+| Git hooks                 | ❌ apenas os `.sample` do `git init`                                                    |
 | Scripts do `package.json` | ✅ dev, build, preview, lint, format, format:check — ❌ faltam `lint:fix` e `typecheck` |
-| Configuração do OpenCode | ✅ `.opencode/` (agents, skills, spec) — sem `opencode.json` global |
-| Skills existentes | ✅ `componentes`, `react`, `tailwind-ui`, `testes` |
-| Agentes existentes | ✅ `frontend` (primary), `code-reviewer` (subagent), `qa` (subagent) |
-| Workflows existentes | ❌ nenhum |
-| CI (GitHub Actions) | ✅ `.github/workflows/ci.yml` (lint + format:check + build) |
-| Template de PR | ✅ `.github/PULL_REQUEST_TEMPLATE.md` |
-| VS Code | ✅ `.vscode/settings.json` + `extensions.json` |
+| Configuração do OpenCode  | ✅ `.opencode/` (agents, skills, spec) — sem `opencode.json` global                     |
+| Skills existentes         | ✅ `componentes`, `react`, `tailwind-ui`, `testes`                                      |
+| Agentes existentes        | ✅ `frontend` (primary), `code-reviewer` (subagent), `qa` (subagent)                    |
+| Workflows existentes      | ❌ nenhum                                                                               |
+| CI (GitHub Actions)       | ✅ `.github/workflows/ci.yml` (lint + format:check + build)                             |
+| Template de PR            | ✅ `.github/PULL_REQUEST_TEMPLATE.md`                                                   |
+| VS Code                   | ✅ `.vscode/settings.json` + `extensions.json`                                          |
 
 ---
 
@@ -116,13 +116,13 @@ Criar:
 
 Configurações esperadas:
 
-* `root = true`
-* Charset UTF-8
-* Final de linha LF
-* Indentação com espaços
-* `indent_size = 2`
-* Remover espaços no final das linhas
-* Inserir newline no final dos arquivos
+- `root = true`
+- Charset UTF-8
+- Final de linha LF
+- Indentação com espaços
+- `indent_size = 2`
+- Remover espaços no final das linhas
+- Inserir newline no final dos arquivos
 
 O EditorConfig deve ser compatível com VS Code e outros editores utilizados pelo time.
 
@@ -159,11 +159,11 @@ Scripts existentes:
 
 O Prettier não deve formatar:
 
-* `node_modules`
-* arquivos de build (`dist`)
-* arquivos gerados automaticamente (`package-lock.json`)
-* arquivos de ambiente
-* outros arquivos que não façam parte do código-fonte
+- `node_modules`
+- arquivos de build (`dist`)
+- arquivos gerados automaticamente (`package-lock.json`)
+- arquivos de ambiente
+- outros arquivos que não façam parte do código-fonte
 
 ---
 
@@ -171,10 +171,10 @@ O Prettier não deve formatar:
 
 Configuração existente em `eslint.config.js` (flat config):
 
-* `@eslint/js` recommended
-* `typescript-eslint` recommended
-* `eslint-plugin-react-hooks` (recommended)
-* `eslint-plugin-react-refresh` (`only-export-components` com `allowConstantExport`)
+- `@eslint/js` recommended
+- `typescript-eslint` recommended
+- `eslint-plugin-react-hooks` (recommended)
+- `eslint-plugin-react-refresh` (`only-export-components` com `allowConstantExport`)
 
 Funciona corretamente com TypeScript, React, React Hooks e não conflita com o Prettier (não há regras de estilo no ESLint).
 
@@ -198,10 +198,10 @@ Script existente:
 
 Configuração existente (`tsconfig.json` com project references para `tsconfig.app.json` e `tsconfig.node.json`):
 
-* `noUnusedLocals: true`
-* `noUnusedParameters: true`
-* `noFallthroughCasesInSwitch: true`
-* `noEmit: true` (typecheck sem gerar arquivos)
+- `noUnusedLocals: true`
+- `noUnusedParameters: true`
+- `noFallthroughCasesInSwitch: true`
+- `noEmit: true` (typecheck sem gerar arquivos)
 
 O `build` já roda `tsc -b && vite build` (typecheck embutido).
 
@@ -213,11 +213,11 @@ O `build` já roda `tsc -b && vite build` (typecheck embutido).
 
 Regras:
 
-* Evitar `any` quando existir alternativa razoável.
-* Preferir tipos explícitos em APIs públicas e estruturas importantes.
-* Não utilizar `@ts-ignore` sem justificativa.
-* Não desativar verificações TypeScript apenas para eliminar erros.
-* Não modificar funcionalidades existentes apenas para esconder erros.
+- Evitar `any` quando existir alternativa razoável.
+- Preferir tipos explícitos em APIs públicas e estruturas importantes.
+- Não utilizar `@ts-ignore` sem justificativa.
+- Não desativar verificações TypeScript apenas para eliminar erros.
+- Não modificar funcionalidades existentes apenas para esconder erros.
 
 ---
 
@@ -295,11 +295,11 @@ Não reorganizar todos os arquivos existentes apenas para aplicar essa regra. Ap
 
 ### Componentes
 
-* Arquivos `PascalCase.tsx` com **named export**.
-* Props tipadas com interface `XxxProps`, sempre aceitando `className?: string`.
-* Mesclar classes com `cn()` de `src/lib/utils.ts` (clsx + tailwind-merge) — nunca concatenar strings.
-* Usar somente tokens do `@theme` (`--color-arcade-*`, `--font-sans`/`--font-display`) — cores/fontes hardcoded proibidas.
-* `src/sections/` exportam somente componentes (regra `react-refresh/only-export-components`).
+- Arquivos `PascalCase.tsx` com **named export**.
+- Props tipadas com interface `XxxProps`, sempre aceitando `className?: string`.
+- Mesclar classes com `cn()` de `src/lib/utils.ts` (clsx + tailwind-merge) — nunca concatenar strings.
+- Usar somente tokens do `@theme` (`--color-arcade-*`, `--font-sans`/`--font-display`) — cores/fontes hardcoded proibidas.
+- `src/sections/` exportam somente componentes (regra `react-refresh/only-export-components`).
 
 ---
 
@@ -404,12 +404,12 @@ Criar uma skill específica para commits.
 
 Responsabilidades:
 
-* Analisar alterações realizadas.
-* Identificar o tipo de Conventional Commit adequado.
-* Gerar a mensagem em português, com escopo quando aplicável.
-* Manter a mensagem curta e objetiva.
-* Não incluir alterações não relacionadas.
-* Não criar commit automaticamente sem autorização explícita do usuário.
+- Analisar alterações realizadas.
+- Identificar o tipo de Conventional Commit adequado.
+- Gerar a mensagem em português, com escopo quando aplicável.
+- Manter a mensagem curta e objetiva.
+- Não incluir alterações não relacionadas.
+- Não criar commit automaticamente sem autorização explícita do usuário.
 
 Exemplo:
 
@@ -433,16 +433,16 @@ tech-lead
 
 Responsabilidades:
 
-* Revisar decisões técnicas.
-* Verificar arquitetura.
-* Verificar padrões de código.
-* Verificar TypeScript.
-* Verificar React.
-* Verificar organização do projeto.
-* Identificar duplicação desnecessária.
-* Identificar código potencialmente problemático.
-* Verificar aderência às regras do projeto.
-* Sugerir melhorias quando necessário.
+- Revisar decisões técnicas.
+- Verificar arquitetura.
+- Verificar padrões de código.
+- Verificar TypeScript.
+- Verificar React.
+- Verificar organização do projeto.
+- Identificar duplicação desnecessária.
+- Identificar código potencialmente problemático.
+- Verificar aderência às regras do projeto.
+- Sugerir melhorias quando necessário.
 
 O Tech Lead deve priorizar:
 
@@ -456,11 +456,11 @@ baixo acoplamento
 
 O Tech Lead não deve:
 
-* Fazer refatorações gigantes sem solicitação.
-* Alterar arquitetura sem justificativa.
-* Adicionar dependências desnecessárias.
-* Criar abstrações prematuras.
-* Ignorar padrões definidos neste documento.
+- Fazer refatorações gigantes sem solicitação.
+- Alterar arquitetura sem justificativa.
+- Adicionar dependências desnecessárias.
+- Criar abstrações prematuras.
+- Ignorar padrões definidos neste documento.
 
 ⚠️ **Observação**: o agente `code-reviewer` já cobre parte desse papel (revisão de diffs contra `AGENTS.md` e `docs/`). O `tech-lead` deve ser complementar, focado em decisões técnicas e arquitetura.
 
@@ -472,15 +472,15 @@ O Tech Lead não deve:
 
 Utilizar inglês para:
 
-* Variáveis
-* Funções
-* Componentes
-* Tipos
-* Interfaces
-* Hooks
-* Arquivos
-* Pastas
-* Comentários técnicos quando necessários
+- Variáveis
+- Funções
+- Componentes
+- Tipos
+- Interfaces
+- Hooks
+- Arquivos
+- Pastas
+- Comentários técnicos quando necessários
 
 ### Commits
 
@@ -587,8 +587,8 @@ A versão deve ser definida com base na versão do Node atualmente compatível c
 
 Base para a decisão:
 
-* Node local: v24.21.0
-* CI (`ci.yml`): `node-version: 24`
+- Node local: v24.21.0
+- CI (`ci.yml`): `node-version: 24`
 
 Valor sugerido:
 
@@ -674,28 +674,28 @@ com uma alteração controlada.
 
 A implementação será considerada concluída quando:
 
-* [ ] `.editorconfig` estiver configurado. ❌
-* [ ] Prettier estiver configurado. ✅
-* [ ] ESLint estiver integrado ao TypeScript. ✅
-* [ ] ESLint e Prettier não apresentarem conflitos. ✅
-* [ ] Indentação estiver padronizada em 2 espaços. ✅
-* [ ] TypeScript possuir verificação via `typecheck`. ❌ (script)
-* [ ] Husky estiver funcionando. ❌
-* [ ] Pre-commit estiver funcionando. ❌
-* [ ] Commits seguirem Conventional Commits. ✅
-* [ ] Commits forem padronizados em português. ✅
-* [ ] Skill de commit estiver criada. ❌
-* [ ] Agente Tech Lead estiver configurado. ❌
-* [ ] Skills estiverem organizadas. ✅
-* [ ] Workflows estiverem definidos. ❌
-* [ ] `.nvmrc` estiver configurado. ❌
-* [ ] Scripts do `package.json` estiverem funcionando. ⚠️ (faltam `lint:fix` e `typecheck`)
-* [ ] `lint` passar. ✅
-* [ ] `format:check` passar. ✅
-* [ ] `typecheck` passar. ❌ (script)
-* [ ] `build` passar. ✅
-* [ ] Projeto continuar executando normalmente. ✅
-* [ ] Nenhuma funcionalidade da LP tiver sido alterada sem necessidade. ✅
+- [ ] `.editorconfig` estiver configurado. ❌
+- [ ] Prettier estiver configurado. ✅
+- [ ] ESLint estiver integrado ao TypeScript. ✅
+- [ ] ESLint e Prettier não apresentarem conflitos. ✅
+- [ ] Indentação estiver padronizada em 2 espaços. ✅
+- [ ] TypeScript possuir verificação via `typecheck`. ❌ (script)
+- [ ] Husky estiver funcionando. ❌
+- [ ] Pre-commit estiver funcionando. ❌
+- [ ] Commits seguirem Conventional Commits. ✅
+- [ ] Commits forem padronizados em português. ✅
+- [ ] Skill de commit estiver criada. ❌
+- [ ] Agente Tech Lead estiver configurado. ❌
+- [ ] Skills estiverem organizadas. ✅
+- [ ] Workflows estiverem definidos. ❌
+- [ ] `.nvmrc` estiver configurado. ❌
+- [ ] Scripts do `package.json` estiverem funcionando. ⚠️ (faltam `lint:fix` e `typecheck`)
+- [ ] `lint` passar. ✅
+- [ ] `format:check` passar. ✅
+- [ ] `typecheck` passar. ❌ (script)
+- [ ] `build` passar. ✅
+- [ ] Projeto continuar executando normalmente. ✅
+- [ ] Nenhuma funcionalidade da LP tiver sido alterada sem necessidade. ✅
 
 ---
 
@@ -739,6 +739,6 @@ Informar qualquer problema que não tenha sido possível resolver automaticament
 
 Se alguma alteração fora do escopo tiver sido necessária, explicar:
 
-* O que foi alterado.
-* Por que foi necessário.
-* Qual o impacto.
+- O que foi alterado.
+- Por que foi necessário.
+- Qual o impacto.

@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Husky
+.husky/_
+
 # Environment
 .env
 .env.*

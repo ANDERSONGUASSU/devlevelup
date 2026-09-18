@@ -1,3 +1,11 @@
 dist
 node_modules
 package-lock.json
+
+# Documentação e infra (não fazem parte do código-fonte)
+.opencode
+.github
+.vscode
+docs
+AGENTS.md
+README.md

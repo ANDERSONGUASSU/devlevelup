@@ -12,9 +12,18 @@ dist
 dist-ssr
 *.local
 
+# Husky
+.husky/_
+
+# Environment
+.env
+.env.*
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 .DS_Store
 *.suo

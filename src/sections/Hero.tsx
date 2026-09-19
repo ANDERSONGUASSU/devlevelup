@@ -18,16 +18,16 @@ export function Hero({ className }: HeroProps) {
   return (
     <section
       className={cn(
-        'relative flex flex-col items-center justify-center gap-6 overflow-hidden bg-arcade-background px-6 py-16 lg:flex-row lg:gap-10 lg:px-20 lg:py-[72px]',
+        'relative flex flex-col items-center justify-center gap-6 overflow-hidden bg-arcade-background px-6 py-16 lg:flex-row lg:gap-10 lg:px-20 lg:py-18',
         className,
       )}
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-20 top-36 h-[400px] w-[600px] rounded-full bg-arcade-glow opacity-50 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-36 h-100 w-150 rounded-full bg-arcade-glow opacity-50 blur-3xl"
       />
 
-      <div className="flex w-full flex-col gap-7 lg:w-[620px]">
+      <div className="flex w-full flex-col gap-7 lg:w-155">
         <div className="flex items-center gap-2">
           <span aria-hidden="true" className="h-0.5 w-6 bg-arcade-cyan" />
           <p className="font-inter text-[11px] font-bold uppercase tracking-[0.08em] text-arcade-cyan">
@@ -62,7 +62,7 @@ export function Hero({ className }: HeroProps) {
             href="#jornada"
             variant="secondary"
             size="lg"
-            className="rounded-md border-2 px-6 py-[13px] font-inter tracking-[0.04em] after:hidden"
+            className="rounded-md border-2 px-6 py-3.25 font-inter tracking-[0.04em] after:hidden"
           >
             <PlayIcon className="size-4" />
             {'Ver Jornada de Evolução'}
@@ -91,8 +91,8 @@ export function Hero({ className }: HeroProps) {
         </div>
       </div>
 
-      <div className="relative w-full max-w-[620px] lg:w-[620px]">
-        <div className="relative aspect-[620/460] overflow-hidden rounded-xl">
+      <div className="relative w-full max-w-155 lg:w-155">
+        <div className="relative aspect-620/460 overflow-hidden rounded-xl">
           <img
             src="/images/rpg-scene.png"
             alt="Cena de jogo RPG com personagens da comunidade SouJunior"
@@ -105,7 +105,7 @@ export function Hero({ className }: HeroProps) {
           />
         </div>
 
-        <div className="absolute left-10 top-[30px] flex items-center gap-1.5 rounded-full bg-arcade-cta-text px-4 py-2 shadow-arcade-badge ring-2 ring-arcade-cyan">
+        <div className="absolute left-10 top-7.5 flex items-center gap-1.5 rounded-full bg-arcade-cta-text px-4 py-2 shadow-arcade-badge ring-2 ring-arcade-cyan">
           <span className="font-inter text-[11px] font-extrabold text-arcade-yellow">
             {'⭐ +XP'}
           </span>
@@ -114,7 +114,7 @@ export function Hero({ className }: HeroProps) {
           </span>
         </div>
 
-        <div className="absolute bottom-5 right-5 flex w-[120px] flex-col items-center gap-0.5 rounded-lg bg-arcade-level py-2 shadow-arcade-level ring-2 ring-arcade-yellow">
+        <div className="absolute bottom-5 right-5 flex w-30 flex-col items-center gap-0.5 rounded-lg bg-arcade-level py-2 shadow-arcade-level ring-2 ring-arcade-yellow">
           <span className="font-inter text-[10px] font-bold uppercase text-arcade-yellow">
             {'Nível'}
           </span>

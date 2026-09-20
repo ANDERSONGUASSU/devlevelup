@@ -165,3 +165,92 @@ export function SouJuniorWordmark({ className }: IconProps) {
     </svg>
   )
 }
+export function DiscordIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M8.75014 5.24968L5.24986 8.74996M5.24986 5.24968L8.75014 8.74996M12.8338 6.99982C12.8338 10.2217 10.2219 12.8336 7 12.8336C3.77808 12.8336 1.1662 10.2217 1.1662 6.99982C1.1662 3.7779 3.77808 1.16602 7 1.16602C10.2219 1.16602 12.8338 3.7779 12.8338 6.99982Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function WhatsAppIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M1.79957 10.2134C1.84961 9.98609 1.83051 9.74899 1.74473 9.53261C1.1478 8.29408 1.00749 6.88451 1.34855 5.55261C1.68962 4.22071 2.49014 3.05206 3.60889 2.25286C4.72763 1.45366 6.09269 1.07527 7.46324 1.18444C8.83378 1.29362 10.1217 1.88334 11.0998 2.84957C12.078 3.8158 12.6834 5.09644 12.8093 6.46554C12.9352 7.83464 12.5735 9.20422 11.788 10.3326C11.0025 11.461 9.84375 12.2758 8.5161 12.6331C7.18846 12.9904 5.77727 12.8673 4.53153 12.2856C4.32708 12.2079 4.10492 12.1893 3.8904 12.2319L1.89933 12.8141C1.80328 12.8396 1.70231 12.8401 1.606 12.8156C1.50969 12.7912 1.42123 12.7425 1.34901 12.6742C1.27678 12.606 1.22319 12.5204 1.19331 12.4257C1.16343 12.3309 1.15825 12.2301 1.17827 12.1327L1.79957 10.2134Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function GitHubIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M5.24964 12.8336V10.5001C5.2088 10.1384 5.23797 9.77087 5.33714 9.42084C5.43632 9.07081 5.60549 8.74412 5.833 8.45827C4.08291 8.45827 2.33281 7.29151 2.33281 5.24968C2.28525 4.52208 2.49141 3.80049 2.91618 3.20785C2.74117 2.53696 2.74117 1.8369 2.91618 1.16602C2.91618 1.16602 3.49954 1.16602 4.66627 2.04109C6.20636 1.7494 7.79311 1.7494 9.3332 2.04109C10.4999 1.16602 11.0833 1.16602 11.0833 1.16602C11.2466 1.8369 11.2466 2.53696 11.0833 3.20785C11.5092 3.80289 11.7133 4.52045 11.6667 5.24968C11.6667 7.29151 9.91656 8.45827 8.16647 8.45827C8.62145 9.03589 8.83099 9.76929 8.74983 10.5001V12.8336M5.24964 10.5001C2.61866 11.6669 2.33293 9.33334 1.1662 9.33334"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function ArrowRightIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M2.91626 6.99982H11.0839M7.00006 11.0836L11.0839 6.99982L7.00006 2.91602"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function CodeIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M9.33352 10.5L12.8338 7L9.33352 3.5M4.66648 3.5L1.1662 7L4.66648 10.5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}

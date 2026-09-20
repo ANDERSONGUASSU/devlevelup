@@ -1,5 +1,10 @@
 import { useState } from 'react'
-import { CloseIcon, MenuIcon } from '../components/ui/icons'
+import {
+  CloseIcon,
+  MenuIcon,
+  SouJuniorMark,
+  SouJuniorWordmark,
+} from '../components/ui/icons'
 import { siteConfig } from '../config'
 import { navLinks } from '../data/nav'
 import { cn } from '../lib/utils'
@@ -24,11 +29,9 @@ export function Header({ className }: HeaderProps) {
           className="flex items-center gap-3"
           aria-label="SouJunior — início"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-arcade-purple to-arcade-cyan font-pixel text-[11px] leading-none text-arcade-950">
-            {'SJ'}
-          </span>
-          <span className="font-sans text-lg font-bold text-arcade-ghost">
-            {'SouJunior'}
+          <span className="flex items-center gap-3">
+            <SouJuniorMark className="size-9 text-arcade-white" />
+            <SouJuniorWordmark className="h-[17px] w-auto text-arcade-white" />
           </span>
         </a>
 

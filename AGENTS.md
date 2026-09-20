@@ -1,6 +1,6 @@
 # AGENTS.md — Regras do projeto DevLevelUp
 
-Guia de regras para agentes/IA e devs trabalharem neste repo. Stack: Vite + React 19 + TS + Tailwind v4 · fork + PRs · sem testes automatizados por enquanto.
+Guia de regras para agentes/IA e devs trabalharem neste repo. Stack: Vite + React 19 + TS + Tailwind v4 · Gitflow + PRs · sem testes automatizados por enquanto.
 
 ## Comandos
 
@@ -17,12 +17,22 @@ Sempre rodar `lint` + `format:check` + `build` antes de terminar uma tarefa.
 
 ## Branches
 
-- `main` = produção (deploy automático na Vercel)
-- `feature/*` — nova funcionalidade/seção
-- `fix/*` — correção
-- `chore/*` — tarefa interna (infra, tooling)
+Fluxo **Gitflow clássico** (detalhes em `docs/git-branches.md`):
 
-Trabalhar sempre a partir de `main` atualizado, nunca commit direto em `main`.
+- `main` — produção (deploy automático na Vercel); sempre taggável (`vX.Y.Z`)
+- `develop` — integração; base para features e destino padrão dos PRs
+- `feature/*` — nova funcionalidade/seção (ex.: `feature/hero`)
+- `fix/*` — correção (ex.: `fix/css-blur-em-mobile`)
+- `chore/*` — tarefa interna/infra (ex.: `chore/ci-lint`)
+- `release/vX.Y.Z` — preparação de release, criada de `develop`; merge em `main` + volta para `develop`
+- `hotfix/*` — correção urgente de produção, criada de `main`; merge em `main` + volta para `develop`
+
+Regras:
+
+- Trabalhar sempre a partir de `develop` atualizado, nunca commit direto em `main` ou `develop`.
+- `feature/*`, `fix/*` e `chore/*` abrem PR para `develop`.
+- `release/*` e `hotfix/*` abrem PR para `main` (com tag semver) e depois são mesclados de volta em `develop`.
+- Merge em `develop` com **squash**; merge de `release/*`/`hotfix/*` em `main` com **merge --no-ff** (preserva o ponto de release).
 
 ## Commits
 
@@ -62,7 +72,8 @@ Mensagens em português, descritivas. Um commit = uma mudança coesa.
 ## Pull requests / review
 
 - PR mínimo 1 reviewer; QA veta/libera cada PR via preview da Vercel
-- PR final mergeado em `main` com **squash**
+- `feature/*`, `fix/*` e `chore/*` → PR para `develop` (merge com **squash**)
+- `release/*` e `hotfix/*` → PR para `main` (merge com **--no-ff** + tag semver) e volta para `develop`
 - Checklist no PR: QA ok no preview + `lint` + `format:check` + `build` verdes
 
 ## Docs

@@ -64,6 +64,10 @@
   --color-arcade-footer-text: #cbd5e1;
   --color-arcade-footer-divider: rgba(255, 255, 255, 0.08);
 
+  --color-arcade-navbar: rgba(9, 13, 22, 0.8);
+  --color-arcade-nav-muted: #94a3b8;
+  --color-arcade-nav-border: rgba(255, 255, 255, 0.08);
+
   --shadow-arcade-glow: 0 0 8px rgba(0, 240, 255, 0.25);
   --shadow-arcade-cta: 0 4px 16px rgba(253, 223, 1, 0.4);
   --shadow-arcade-badge: 0 0 12px rgba(0, 240, 255, 0.4);
@@ -71,4 +75,5 @@
   --shadow-arcade-cta-cyan: 0 4px 16px rgba(0, 240, 255, 0.25);
 
   --text-shadow-arcade-title: 0 0 20px rgba(0, 240, 255, 0.5);
+  --text-shadow-arcade-nav: 0 0 8px rgba(0, 240, 255, 0.4);
 }

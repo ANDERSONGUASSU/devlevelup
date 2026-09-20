@@ -1,4 +1,4 @@
-import { SouJuniorLogo } from '../ui/icons'
+import { SouJuniorMark, SouJuniorWordmark } from '../ui/icons'
 import { cn } from '../../lib/utils'
 
 interface FooterBrandProps {
@@ -8,7 +8,10 @@ interface FooterBrandProps {
 export function FooterBrand({ className }: FooterBrandProps) {
   return (
     <div className={cn('flex flex-col gap-6', className)}>
-      <SouJuniorLogo className="h-5 w-33.5 text-arcade-white" />
+      <span className="flex items-center gap-3">
+        <SouJuniorMark className="size-8 text-arcade-white" />
+        <SouJuniorWordmark className="h-[17px] w-auto text-arcade-white" />
+      </span>
       <p className="font-sans text-sm leading-[1.57] text-arcade-footer-text">
         {
           'Aceleração profissional de juniores na tecnologia por meio de projetos reais e squads colaborativas.'

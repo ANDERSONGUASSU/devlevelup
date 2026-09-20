@@ -59,11 +59,16 @@
   --color-arcade-level: #0d1a3e;
   --color-arcade-white: #ffffff;
   --color-arcade-scene-overlay: rgba(6, 11, 31, 0.15);
+  --color-arcade-footer: #090d16;
+  --color-arcade-footer-heading: #f8fafc;
+  --color-arcade-footer-text: #cbd5e1;
+  --color-arcade-footer-divider: rgba(255, 255, 255, 0.08);
 
   --shadow-arcade-glow: 0 0 8px rgba(0, 240, 255, 0.25);
   --shadow-arcade-cta: 0 4px 16px rgba(253, 223, 1, 0.4);
   --shadow-arcade-badge: 0 0 12px rgba(0, 240, 255, 0.4);
   --shadow-arcade-level: 0 0 10px rgba(253, 223, 1, 0.4);
+  --shadow-arcade-cta-cyan: 0 4px 16px rgba(0, 240, 255, 0.25);
 
   --text-shadow-arcade-title: 0 0 20px rgba(0, 240, 255, 0.5);
 }

@@ -6,5 +6,7 @@ export const siteConfig = {
   links: {
     apoia: 'https://apoia.se',
     github: 'https://github.com',
+    discord: 'https://discord.gg/soujunior',
+    whatsapp: 'https://wa.me/5500000000000',
   },
 } as const

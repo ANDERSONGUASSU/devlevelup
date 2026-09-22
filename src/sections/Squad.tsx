@@ -13,7 +13,7 @@ export function Squad({ className }: SquadProps) {
     <section
       id="squads"
       className={cn(
-        'relative flex flex-col items-center gap-14 overflow-hidden bg-arcade-footer px-6 py-16 lg:px-20 lg:py-24',
+        'relative flex flex-col items-center gap-16 overflow-hidden bg-arcade-footer px-6 py-20 lg:px-20 lg:py-28',
         className,
       )}
     >
@@ -54,11 +54,12 @@ export function Squad({ className }: SquadProps) {
         subtitle={squadCopy.subtitle}
         title={squadCopy.title}
         description={squadCopy.description}
+        size="lg"
         className="relative z-10"
       />
 
       <div className="relative z-10 flex w-full max-w-300 flex-col items-center">
-        <div className="relative z-10 grid w-full grid-cols-2 gap-6 lg:grid-cols-4">
+        <div className="relative z-10 grid w-full grid-cols-2 gap-8 lg:grid-cols-4">
           {squadCopy.roles.map((role) => (
             <SquadCard key={role.label} role={role} />
           ))}
@@ -67,7 +68,7 @@ export function Squad({ className }: SquadProps) {
           src="/images/avatar-squad/pixel_plataform.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none -mt-3 h-40 w-full object-cover object-center"
+          className="pointer-events-none -mt-4 h-56 w-full object-cover object-center"
         />
       </div>
 

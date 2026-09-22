@@ -3,6 +3,7 @@ import { CTA } from './sections/CTA'
 import { Footer } from './sections/Footer'
 import { Header } from './sections/Header'
 import { Hero } from './sections/Hero'
+import { Impact } from './sections/Impact'
 import { LevelUp } from './sections/LevelUp'
 import { Squad } from './sections/Squad'
 
@@ -15,6 +16,7 @@ export default function App() {
       <LevelUp />
       <CTA />
       <Squad />
+      <Impact />
       <Footer />
     </div>
   )

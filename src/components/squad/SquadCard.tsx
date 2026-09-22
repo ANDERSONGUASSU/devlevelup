@@ -1,4 +1,5 @@
 import type { SquadRole } from '../../data/squad'
+import { SquadAvatar } from './SquadAvatar'
 import { cn } from '../../lib/utils'
 
 interface SquadCardProps {
@@ -19,10 +20,10 @@ export function SquadCard({ role, className }: SquadCardProps) {
         />
       </div>
       <div className="relative mt-4">
-        <img
-          src={role.image}
+        <SquadAvatar
+          frames={role.frames}
           alt={role.name}
-          className="size-40 object-contain"
+          className="size-28 sm:size-40"
         />
         <div
           aria-hidden="true"

@@ -44,13 +44,6 @@ export function Squad({ className }: SquadProps) {
         ))}
       </div>
 
-      <img
-        src="/images/avatar-squad/pixel_plataform.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-1/2 h-40 w-full max-w-300 -translate-x-1/2 object-cover object-bottom opacity-40 lg:h-56"
-      />
-
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-1 bg-arcade-cyan opacity-40"

@@ -54,7 +54,6 @@ export function Squad({ className }: SquadProps) {
         subtitle={squadCopy.subtitle}
         title={squadCopy.title}
         description={squadCopy.description}
-        size="lg"
         className="relative z-10"
       />
 
@@ -68,7 +67,7 @@ export function Squad({ className }: SquadProps) {
           src="/images/avatar-squad/pixel_plataform.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none -mt-4 h-56 w-full object-cover object-center"
+          className="pointer-events-none -mt-1 h-56 w-full object-cover object-center"
         />
       </div>
 

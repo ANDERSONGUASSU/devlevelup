@@ -32,6 +32,7 @@ export function Squad({ className }: SquadProps) {
 
       <SectionHeader
         badge={squadCopy.badge}
+        subtitle={squadCopy.subtitle}
         title={squadCopy.title}
         description={squadCopy.description}
       />
@@ -50,7 +51,7 @@ export function Squad({ className }: SquadProps) {
           src="/images/avatar-squad/pixel_plataform.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none -mt-28 h-48 w-full object-cover object-center"
+          className="pointer-events-none -mt-15 h-48 w-full object-cover object-center"
         />
       </div>
 

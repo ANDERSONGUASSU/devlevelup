@@ -41,7 +41,7 @@ export function Squad({ className }: SquadProps) {
           src="/images/avatar-squad/pixel_plataform.png"
           alt=""
           aria-hidden="true"
-          className="-mt-8 h-32 w-full object-cover object-top"
+          className="pointer-events-none -mt-16 h-40 w-full object-cover object-top"
         />
       </div>
 

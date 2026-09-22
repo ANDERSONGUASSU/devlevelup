@@ -1,4 +1,4 @@
-import { SquadCard } from '../components/squad/SquadCard'
+import { SquadPlatform } from '../components/squad/SquadPlatform'
 import { SquadGlows } from '../components/squad/SquadGlows'
 import { SectionHeader } from '../components/ui/SectionHeader'
 import { Starfield } from '../components/ui/Starfield'
@@ -34,18 +34,8 @@ export function Squad({ className }: SquadProps) {
         className="relative z-10"
       />
 
-      <div className="relative z-10 flex w-full max-w-300 flex-col items-center">
-        <div className="relative z-10 grid w-full grid-cols-2 gap-8 lg:grid-cols-4">
-          {squadCopy.roles.map((role) => (
-            <SquadCard key={role.label} role={role} />
-          ))}
-        </div>
-        <img
-          src="/images/avatar-squad/pixel_plataform.png"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none -mt-1 h-56 w-full object-cover object-center"
-        />
+      <div className="relative z-10 mt-24 flex w-full max-w-300 flex-col items-center">
+        <SquadPlatform roles={squadCopy.roles} className="z-10" />
       </div>
 
       <div

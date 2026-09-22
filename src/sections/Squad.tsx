@@ -54,9 +54,10 @@ export function Squad({ className }: SquadProps) {
         subtitle={squadCopy.subtitle}
         title={squadCopy.title}
         description={squadCopy.description}
+        className="relative z-10"
       />
 
-      <div className="relative flex w-full max-w-300 flex-col items-center">
+      <div className="relative z-10 flex w-full max-w-300 flex-col items-center">
         <div className="relative z-10 grid w-full grid-cols-2 gap-6 lg:grid-cols-4">
           {squadCopy.roles.map((role) => (
             <SquadCard key={role.label} role={role} />

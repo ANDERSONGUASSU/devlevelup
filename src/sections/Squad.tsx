@@ -21,14 +21,35 @@ export function Squad({ className }: SquadProps) {
     >
       <div
         aria-hidden="true"
-        className="absolute -left-40 top-40 size-[500px] rounded-full bg-arcade-cyan opacity-10 blur-[75px]"
+        className="absolute inset-x-0 top-0 h-[528px] bg-[radial-gradient(50%_50%_at_50%_20%,var(--color-arcade-900)_0%,var(--color-arcade-footer)_70%,var(--color-arcade-footer)_100%)]"
       />
       <div
         aria-hidden="true"
-        className="absolute -right-40 top-64 size-[500px] rounded-full bg-arcade-purple-glow opacity-10 blur-[75px]"
+        className="absolute -left-25 top-[30px] size-[500px] rounded-full bg-arcade-cyan opacity-[0.13] blur-[75px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-28 top-[30px] size-[500px] rounded-full bg-arcade-purple-glow opacity-[0.13] blur-[75px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -left-30 top-[200px] size-[420px] rounded-full bg-arcade-cyan opacity-[0.11] blur-[75px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-25 top-[200px] size-[440px] rounded-full bg-arcade-purple-glow opacity-[0.11] blur-[75px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-[80px] h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-arcade-cyan opacity-[0.04] blur-[60px]"
       />
 
       <Starfield />
+
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 h-[350px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-arcade-level opacity-[0.6] blur-[30px]"
+      />
 
       <SectionHeader
         badge={squadCopy.badge}

@@ -4,8 +4,6 @@ import { Starfield } from '../components/ui/Starfield'
 import { squadCopy } from '../data/squad'
 import { cn } from '../lib/utils'
 
-const squadStagger = ['lg:mb-0', 'lg:mb-6', 'lg:mb-11', 'lg:mb-15']
-
 interface SquadProps {
   className?: string
 }
@@ -59,20 +57,16 @@ export function Squad({ className }: SquadProps) {
       />
 
       <div className="relative flex w-full max-w-300 flex-col items-center">
-        <div className="relative z-10 grid w-full grid-cols-2 items-end gap-6 lg:grid-cols-4">
-          {squadCopy.roles.map((role, index) => (
-            <SquadCard
-              key={role.label}
-              role={role}
-              className={squadStagger[index]}
-            />
+        <div className="relative z-10 grid w-full grid-cols-2 gap-6 lg:grid-cols-4">
+          {squadCopy.roles.map((role) => (
+            <SquadCard key={role.label} role={role} />
           ))}
         </div>
         <img
           src="/images/avatar-squad/pixel_plataform.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none -mt-15 h-48 w-full object-cover object-center"
+          className="pointer-events-none -mt-3 h-40 w-full object-cover object-center"
         />
       </div>
 

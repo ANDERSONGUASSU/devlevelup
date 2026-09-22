@@ -6,7 +6,7 @@ export interface SquadRole {
 
 export const squadCopy = {
   badge: '⚔️ SQUAD RPG CO-OP',
-  subtitle: 'Squad rpg co-op',
+  subtitle: 'Squad RPG co-op:',
   title: 'Nossa equipe multidisciplinar',
   description:
     'Como em um verdadeiro jogo de equipe, nossas squads dividem tarefas de ponta a ponta seguindo o padrão ágil profissional do mercado.',

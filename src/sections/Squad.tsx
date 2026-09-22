@@ -33,15 +33,22 @@ export function Squad({ className }: SquadProps) {
 
       <SectionHeader
         badge={squadCopy.badge}
-        subtitle={squadCopy.subtitle}
         title={squadCopy.title}
         description={squadCopy.description}
       />
 
-      <div className="relative grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {squadCopy.roles.map((role) => (
-          <SquadCard key={role.label} role={role} />
-        ))}
+      <div className="relative flex w-full max-w-300 flex-col items-center">
+        <div className="relative z-10 grid w-full grid-cols-2 gap-6 lg:grid-cols-4">
+          {squadCopy.roles.map((role) => (
+            <SquadCard key={role.label} role={role} />
+          ))}
+        </div>
+        <img
+          src="/images/avatar-squad/pixel_plataform.png"
+          alt=""
+          aria-hidden="true"
+          className="-mt-8 h-32 w-full object-cover object-top"
+        />
       </div>
 
       <div

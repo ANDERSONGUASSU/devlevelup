@@ -33,6 +33,7 @@ export function Squad({ className }: SquadProps) {
 
       <SectionHeader
         badge={squadCopy.badge}
+        subtitle={squadCopy.subtitle}
         title={squadCopy.title}
         description={squadCopy.description}
       />

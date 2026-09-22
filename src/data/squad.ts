@@ -6,10 +6,11 @@ export interface SquadRole {
 }
 
 export const squadCopy = {
-  badge: '⚡ NOSSAS SQUADS',
-  title: 'Um time completo, como no mercado real',
+  badge: '⚔️ SQUAD RPG CO-OP',
+  subtitle: 'Squad RPG co-op:',
+  title: 'Nossa equipe multidisciplinar',
   description:
-    'Squads multidisciplinares ativas com PM, UX/UI, Dev e QA simulando o ambiente de mercado real.',
+    'Como em um verdadeiro jogo de equipe, nossas squads dividem tarefas de ponta a ponta seguindo o padrão ágil profissional do mercado.',
   roles: [
     {
       label: 'QA ENGINEER',

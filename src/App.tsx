@@ -12,9 +12,9 @@ export default function App() {
       <Header />
       <Hero />
       <Comparison />
-      <Squad />
       <LevelUp />
       <CTA />
+      <Squad />
       <Footer />
     </div>
   )

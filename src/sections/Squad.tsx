@@ -24,12 +24,6 @@ export function Squad({ className }: SquadProps) {
         aria-hidden="true"
         className="absolute -right-40 top-64 size-[500px] rounded-full bg-arcade-purple-glow opacity-10 blur-[75px]"
       />
-      <img
-        src="/images/grid-texture.svg"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-      />
 
       <SectionHeader
         badge={squadCopy.badge}

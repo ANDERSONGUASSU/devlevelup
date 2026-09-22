@@ -1,5 +1,6 @@
 import { SquadCard } from '../components/squad/SquadCard'
 import { SectionHeader } from '../components/ui/SectionHeader'
+import { Starfield } from '../components/ui/Starfield'
 import { squadCopy } from '../data/squad'
 import { cn } from '../lib/utils'
 
@@ -27,6 +28,8 @@ export function Squad({ className }: SquadProps) {
         className="absolute -right-40 top-64 size-[500px] rounded-full bg-arcade-purple-glow opacity-10 blur-[75px]"
       />
 
+      <Starfield />
+
       <SectionHeader
         badge={squadCopy.badge}
         title={squadCopy.title}
@@ -47,7 +50,7 @@ export function Squad({ className }: SquadProps) {
           src="/images/avatar-squad/pixel_plataform.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none -mt-28 h-40 w-full object-cover object-top"
+          className="pointer-events-none -mt-28 h-48 w-full object-cover object-center"
         />
       </div>
 

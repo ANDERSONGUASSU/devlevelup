@@ -4,8 +4,9 @@ export interface NavLink {
 }
 
 export const navLinks: NavLink[] = [
-  { label: 'Quem Somos', href: '#quem-somos' },
-  { label: 'Nossas Squads', href: '#squads' },
-  { label: 'Transparência', href: '#transparencia' },
-  { label: 'Métricas', href: '#metricas' },
+  { label: 'Jornada', href: '#jornada' },
+  { label: 'Squads', href: '#squads' },
+  { label: 'Impacto', href: '#impacto' },
+  { label: 'Comunidade', href: '#vozes' },
+  { label: 'Meta', href: '#power-up' },
 ]

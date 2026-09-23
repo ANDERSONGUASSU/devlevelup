@@ -81,6 +81,8 @@ export function Header({ className }: HeaderProps) {
           <Mascot loading="eager" className="hidden sm:block" />
           <a
             href={siteConfig.links.apoia}
+            target="_blank"
+            rel="noreferrer"
             className="hidden h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary md:inline-flex md:px-5 md:py-2.5"
           >
             {'Apoiar a partir de R$ 2,00'}
@@ -126,6 +128,8 @@ export function Header({ className }: HeaderProps) {
             <li>
               <a
                 href={siteConfig.links.apoia}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setMenuOpen(false)}
                 className="inline-flex h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary"
               >

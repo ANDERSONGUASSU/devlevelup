@@ -27,6 +27,7 @@ export function HeroActions({ className }: HeroActionsProps) {
       </Button>
       <Button
         href="#jornada"
+        target="_self"
         variant="secondary"
         size="lg"
         className="w-full justify-center rounded-lg border-[1.5px] px-4 py-3.5 font-sans text-[13px] tracking-[0.04em] after:hidden lg:w-auto lg:rounded-xl lg:border-2 lg:px-6 lg:text-sm"

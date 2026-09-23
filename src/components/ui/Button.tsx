@@ -29,8 +29,8 @@ export function Button({
     return (
       <a
         href={href}
-        target={target}
-        rel={rel}
+        target={target ?? '_blank'}
+        rel={rel ?? 'noreferrer'}
         className={classes}
         {...(props as unknown as AnchorHTMLAttributes<HTMLAnchorElement>)}
       />

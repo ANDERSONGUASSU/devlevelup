@@ -116,6 +116,7 @@
 @layer base {
   html {
     @apply bg-arcade-background;
+    scroll-padding-top: 4.5rem;
   }
 
   body {

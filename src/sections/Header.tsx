@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   CloseIcon,
   MenuIcon,
@@ -16,11 +16,32 @@ interface HeaderProps {
 
 export function Header({ className }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const handleMobileNavClick = (href: string) => {
+    setMenuOpen(false)
+    if (!href.startsWith('#')) return
+
+    const id = href.slice(1)
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    })
+  }
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 border-b border-arcade-nav-border bg-arcade-navbar backdrop-blur',
+        'fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color] duration-300',
+        scrolled
+          ? 'border-arcade-nav-border bg-arcade-navbar backdrop-blur'
+          : 'border-transparent bg-transparent',
         className,
       )}
     >
@@ -90,7 +111,7 @@ export function Header({ className }: HeaderProps) {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => handleMobileNavClick(link.href)}
                   className={cn(
                     'font-sans text-sm font-medium transition-colors',
                     index === 0

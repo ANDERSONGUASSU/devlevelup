@@ -10,12 +10,17 @@ interface HeroActionsProps {
 
 export function HeroActions({ className }: HeroActionsProps) {
   return (
-    <div className={cn('flex flex-wrap items-center gap-4', className)}>
+    <div
+      className={cn(
+        'flex flex-col gap-3 lg:flex-row lg:flex-wrap lg:items-center lg:gap-4',
+        className,
+      )}
+    >
       <Button
         href={siteConfig.links.apoia}
         variant="cyan"
         size="lg"
-        className="rounded-xl px-7 py-3.5 font-sans tracking-[0.04em] shadow-arcade-cta-cyan after:hidden"
+        className="w-full justify-center rounded-lg px-4 py-3.5 font-sans text-[13px] tracking-[0.04em] shadow-arcade-hero-cta after:hidden lg:w-auto lg:rounded-xl lg:px-7 lg:text-sm lg:shadow-arcade-cta-cyan"
       >
         <HeartIcon className="size-4" />
         {heroCopy.primaryCta}
@@ -24,7 +29,7 @@ export function HeroActions({ className }: HeroActionsProps) {
         href="#jornada"
         variant="secondary"
         size="lg"
-        className="rounded-xl border-2 px-6 py-3.25 font-sans tracking-[0.04em] after:hidden"
+        className="w-full justify-center rounded-lg border-[1.5px] px-4 py-3.5 font-sans text-[13px] tracking-[0.04em] after:hidden lg:w-auto lg:rounded-xl lg:border-2 lg:px-6 lg:text-sm"
       >
         <PlayIcon className="size-4" />
         {heroCopy.secondaryCta}

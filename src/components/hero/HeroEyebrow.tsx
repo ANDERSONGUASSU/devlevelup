@@ -10,7 +10,7 @@ export function HeroEyebrow({ className }: HeroEyebrowProps) {
   return (
     <div
       className={cn(
-        'inline-flex w-fit items-center gap-2 rounded-full border border-arcade-cyan bg-arcade-950 px-3 py-1.5',
+        'inline-flex w-fit items-center gap-2 rounded-full border border-arcade-cyan bg-arcade-cyan-badge px-3 py-1.5',
         className,
       )}
     >

@@ -9,7 +9,7 @@ export function HeroDescription({ className }: HeroDescriptionProps) {
   return (
     <p
       className={cn(
-        'font-roboto-flex text-base leading-[1.6] text-arcade-white',
+        'font-roboto-flex text-sm leading-[1.5] text-arcade-white lg:text-base lg:leading-[1.6]',
         className,
       )}
     >

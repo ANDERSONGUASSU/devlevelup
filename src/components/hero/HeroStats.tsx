@@ -11,20 +11,20 @@ export function HeroStats({ className }: HeroStatsProps) {
   return (
     <div
       className={cn(
-        'flex items-center justify-between gap-3 rounded-2xl border border-arcade-cyan bg-arcade-stats-bar px-4 py-3 shadow-arcade-stats-bar backdrop-blur-md',
+        'flex items-center justify-between gap-3 rounded-xl border border-arcade-cyan bg-arcade-white/3 px-3 py-4 shadow-arcade-stats-bar backdrop-blur-md lg:rounded-2xl lg:bg-arcade-stats-bar lg:px-4 lg:py-3',
         className,
       )}
     >
       {heroStats.map((stat, index) => (
         <Fragment key={stat.value}>
           {index > 0 && (
-            <span aria-hidden="true" className="h-8 w-px bg-arcade-cyan/25" />
+            <span aria-hidden="true" className="h-8 w-px bg-arcade-white/8" />
           )}
           <div className="flex flex-col gap-0.5">
-            <span className="font-pixel text-xl leading-none text-arcade-cyan">
+            <span className="font-pixel text-base leading-none text-arcade-cyan lg:text-xl">
               <CountUp value={stat.value} />
             </span>
-            <span className="font-roboto-flex text-xs text-arcade-white">
+            <span className="font-roboto-flex text-[10px] text-arcade-white lg:text-xs">
               {stat.label}
             </span>
           </div>

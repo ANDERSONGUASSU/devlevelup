@@ -15,7 +15,7 @@ export function Hero({ className }: HeroProps) {
   return (
     <section
       className={cn(
-        'relative flex flex-col items-center justify-center gap-6 overflow-hidden bg-arcade-background px-6 py-16 lg:flex-row lg:justify-start lg:min-h-svh lg:px-20 lg:py-24',
+        'relative flex flex-col items-center justify-center gap-6 overflow-hidden bg-arcade-background px-6 py-16 lg:flex-row lg:justify-start lg:min-h-svh lg:px-20 lg:py-30',
         className,
       )}
     >

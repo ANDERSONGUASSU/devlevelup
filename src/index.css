@@ -1,29 +1,24 @@
-@import '@fontsource/funnel-sans/latin-400.css';
-@import '@fontsource/funnel-sans/latin-500.css';
-@import '@fontsource/funnel-sans/latin-600.css';
-@import '@fontsource/funnel-sans/latin-700.css';
-@import '@fontsource/funnel-sans/latin-800.css';
-@import '@fontsource/funnel-display/latin-400.css';
-@import '@fontsource/funnel-display/latin-500.css';
-@import '@fontsource/funnel-display/latin-600.css';
-@import '@fontsource/funnel-display/latin-700.css';
 @import '@fontsource/press-start-2p/latin-400.css';
-@import '@fontsource/inter/latin-400.css';
-@import '@fontsource/inter/latin-600.css';
-@import '@fontsource/inter/latin-700.css';
-@import '@fontsource/inter/latin-800.css';
-@import '@fontsource/inter/latin-900.css';
 @import '@fontsource/roboto-flex/latin-400.css';
+@import '@fontsource/sora/latin-400.css';
+@import '@fontsource/sora/latin-500.css';
+@import '@fontsource/sora/latin-600.css';
+@import '@fontsource/sora/latin-700.css';
+@import '@fontsource/plus-jakarta-sans/latin-400.css';
+@import '@fontsource/plus-jakarta-sans/latin-500.css';
+@import '@fontsource/plus-jakarta-sans/latin-600.css';
+@import '@fontsource/plus-jakarta-sans/latin-700.css';
+@import '@fontsource/plus-jakarta-sans/latin-800.css';
 
 @import 'tailwindcss';
 
 @theme {
   --font-sans:
-    'Funnel Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display:
-    'Funnel Display', 'Funnel Sans', ui-sans-serif, system-ui, sans-serif;
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-pixel: 'Press Start 2P', 'Courier New', monospace;
-  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sora: 'Sora', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-roboto-flex: 'Roboto Flex', system-ui, -apple-system, sans-serif;
 
   --color-arcade-950: #07070d;

@@ -15,7 +15,7 @@ export function PowerUp({ className }: PowerUpProps) {
     <section
       id="power-up"
       className={cn(
-        'relative flex flex-col items-center gap-10 overflow-hidden bg-arcade-footer px-6 py-16 lg:px-20 lg:py-24',
+        'relative flex flex-col items-center gap-10 overflow-hidden bg-arcade-footer px-6 py-16 lg:px-20 lg:py-30',
         className,
       )}
     >
@@ -72,7 +72,7 @@ export function PowerUp({ className }: PowerUpProps) {
         </div>
         <a
           href={siteConfig.links.apoia}
-          className="inline-flex items-center gap-2 rounded-lg bg-arcade-cyan px-6 py-3.5 font-inter text-base font-bold leading-6 text-arcade-950 shadow-arcade-cta-cyan-lg transition-colors hover:bg-arcade-secondary sm:px-8"
+          className="inline-flex items-center gap-2 rounded-lg bg-arcade-cyan px-6 py-3.5 font-sans text-base font-bold leading-6 text-arcade-950 shadow-arcade-cta-cyan-lg transition-colors hover:bg-arcade-secondary sm:px-8"
         >
           {powerUpCopy.cta.label}
         </a>

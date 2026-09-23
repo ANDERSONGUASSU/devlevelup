@@ -8,14 +8,14 @@ interface LevelUpHeaderProps {
 export function LevelUpHeader({ className }: LevelUpHeaderProps) {
   return (
     <div className={cn('flex flex-col items-center gap-4', className)}>
-      <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-4 py-1.5 font-inter text-xs font-semibold uppercase tracking-wider text-arcade-cyan">
+      <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-4 py-1.5 font-sora text-xs font-semibold uppercase tracking-wider text-arcade-cyan">
         {levelUpCopy.badge}
       </span>
       <div className="flex flex-col items-center gap-1">
-        <p className="font-inter text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
+        <p className="font-sans text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
           {levelUpCopy.subtitle}
         </p>
-        <h2 className="font-inter text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
+        <h2 className="font-sans text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
           {levelUpCopy.title}
         </h2>
       </div>

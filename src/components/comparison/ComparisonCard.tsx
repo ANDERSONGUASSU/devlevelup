@@ -10,9 +10,10 @@ interface ComparisonCardProps {
 }
 
 const cardClasses = {
-  isolated: 'border-arcade-card-border bg-arcade-comparison-card',
+  isolated:
+    'border-arcade-card-border bg-arcade-comparison-card hover:border-arcade-cyan/60 hover:shadow-arcade-card-glow',
   ecosystem:
-    'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow backdrop-blur-xl',
+    'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow hover:border-arcade-purple-glow hover:shadow-arcade-tier-featured backdrop-blur-xl',
 } as const
 
 const eyebrowClasses = {
@@ -38,7 +39,7 @@ export function ComparisonCard({
   return (
     <article
       className={cn(
-        'flex flex-col gap-6 rounded-2xl border p-8 lg:h-95',
+        'flex flex-col gap-6 rounded-2xl border p-8 transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none lg:h-95',
         cardClasses[variant],
         className,
       )}
@@ -46,13 +47,13 @@ export function ComparisonCard({
       <div className="flex flex-col gap-3">
         <p
           className={cn(
-            'font-inter text-xs font-semibold uppercase tracking-wider',
+            'font-sora text-xs font-semibold uppercase tracking-wider',
             eyebrowClasses[variant],
           )}
         >
           {eyebrow}
         </p>
-        <h3 className="font-inter text-xl font-semibold leading-6.5 text-arcade-footer-heading">
+        <h3 className="font-sans text-xl font-semibold leading-6.5 text-arcade-footer-heading">
           {title}
         </h3>
       </div>
@@ -68,7 +69,7 @@ export function ComparisonCard({
             >
               <Icon className="size-3" />
             </span>
-            <p className="font-inter text-sm font-medium leading-5 text-arcade-comparison-bullet">
+            <p className="font-sans text-sm font-medium leading-5 text-arcade-comparison-bullet">
               {bullet}
             </p>
           </li>

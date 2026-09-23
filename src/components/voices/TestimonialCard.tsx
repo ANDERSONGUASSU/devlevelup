@@ -15,26 +15,26 @@ export function TestimonialCard({
   return (
     <article
       className={cn(
-        'flex w-70 flex-col gap-6 rounded-2xl border bg-arcade-comparison-card p-8',
+        'flex w-70 flex-col gap-6 rounded-2xl border bg-arcade-comparison-card p-8 transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none',
         active
-          ? 'border-arcade-cyan shadow-arcade-card-glow'
-          : 'border-arcade-nav-border',
+          ? 'border-arcade-cyan shadow-arcade-card-glow hover:border-arcade-purple-glow hover:shadow-arcade-tier-featured'
+          : 'border-arcade-nav-border hover:border-arcade-cyan/60 hover:shadow-arcade-card-glow',
         className,
       )}
     >
       <div className="flex items-center gap-3">
         <span
           aria-hidden="true"
-          className="font-inter text-[28px] font-bold leading-9 text-arcade-cyan"
+          className="font-sans text-[28px] font-bold leading-9 text-arcade-cyan"
         >
           ❝
         </span>
-        <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-2.5 py-0.5 font-inter text-[10px] font-bold uppercase tracking-wide text-arcade-cyan">
+        <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-2.5 py-0.5 font-sora text-[10px] font-bold uppercase tracking-wide text-arcade-cyan">
           {testimonial.topic}
         </span>
       </div>
 
-      <p className="font-inter text-lg leading-6 text-arcade-footer-heading">
+      <p className="font-sans text-lg leading-6 text-arcade-footer-heading">
         {testimonial.quote}
       </p>
 
@@ -50,10 +50,10 @@ export function TestimonialCard({
           className="size-12 rounded-full border-[1.5px] border-arcade-cyan object-cover"
         />
         <div className="flex flex-col gap-1">
-          <p className="font-inter text-[15px] font-bold leading-5 text-arcade-footer-heading">
+          <p className="font-sans text-[15px] font-bold leading-5 text-arcade-footer-heading">
             {testimonial.name}
           </p>
-          <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-2.5 py-0.5 font-inter text-[11px] font-bold uppercase leading-3.5 text-arcade-cyan">
+          <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-2.5 py-0.5 font-sora text-[11px] font-bold uppercase leading-3.5 text-arcade-cyan">
             {testimonial.role}
           </span>
           <p className="font-roboto-flex text-[11px] leading-3.5 text-arcade-nav-muted">
@@ -66,7 +66,7 @@ export function TestimonialCard({
         {testimonial.badges.map((badge) => (
           <span
             key={badge}
-            className="rounded-full border border-arcade-purple-glow bg-arcade-footer px-2.5 py-1 font-inter text-[10px] font-bold leading-3.5 text-arcade-purple-glow"
+            className="rounded-full border border-arcade-purple-glow bg-arcade-footer px-2.5 py-1 font-sora text-[10px] font-bold leading-3.5 text-arcade-purple-glow"
           >
             {badge}
           </span>

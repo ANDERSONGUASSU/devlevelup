@@ -5,7 +5,7 @@ Documento de arquitetura do repo. Resumo das regras no `AGENTS.md`.
 ## Visão geral
 
 Landing page (LP) de estética 16 bits / dark arcade feita para o Hackathon SouJunior.
-Campanha de apoio via [Apoia.se](https://apoia.se).
+Campanha de apoio via [Apoia.se](https://apoia.se/soujunior).
 
 Spot: **Vite + React 19 + TypeScript + Tailwind CSS v4** (só client-side, sem SSR).
 

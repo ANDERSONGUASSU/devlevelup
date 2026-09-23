@@ -1,7 +1,7 @@
 # DevLevelUp
 
 LP (estética 16bits — dark arcade) feita para o Hackathon SouJunior.
-Campanha de apoio ao projeto via [Apoia.se](https://apoia.se).
+Campanha de apoio ao projeto via [Apoia.se](https://apoia.se/soujunior).
 
 ## Stack
 

@@ -1,11 +1,11 @@
-import { BoltIcon, XCircleIcon } from '../ui/icons'
+import { type LucideIcon } from 'lucide-react'
 import { cn } from '../../lib/utils'
 
 interface ComparisonCardProps {
   variant: 'isolated' | 'ecosystem'
   eyebrow: string
   title: string
-  bullets: readonly string[]
+  bullets: readonly { text: string; icon: LucideIcon }[]
   className?: string
 }
 
@@ -17,7 +17,7 @@ const cardClasses = {
 } as const
 
 const eyebrowClasses = {
-  isolated: 'text-arcade-footer-text',
+  isolated: 'text-arcade-cyan',
   ecosystem: 'text-arcade-cyan',
 } as const
 
@@ -34,8 +34,6 @@ export function ComparisonCard({
   bullets,
   className,
 }: ComparisonCardProps) {
-  const Icon = variant === 'ecosystem' ? BoltIcon : XCircleIcon
-
   return (
     <article
       className={cn(
@@ -60,17 +58,17 @@ export function ComparisonCard({
 
       <ul className="flex flex-col gap-4">
         {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-start gap-3">
+          <li key={bullet.text} className="flex items-start gap-3">
             <span
               className={cn(
                 'flex size-6 shrink-0 items-center justify-center rounded-md border',
                 iconBoxClasses[variant],
               )}
             >
-              <Icon className="size-3" />
+              <bullet.icon className="size-3" />
             </span>
             <p className="font-sans text-sm font-medium leading-5 text-arcade-comparison-bullet">
-              {bullet}
+              {bullet.text}
             </p>
           </li>
         ))}

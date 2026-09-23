@@ -112,3 +112,13 @@
   --text-shadow-arcade-impact: 0 0 12px rgba(0, 240, 255, 0.4);
   --text-shadow-arcade-powerup: 0 0 18px rgba(0, 240, 255, 0.4);
 }
+
+@layer base {
+  html {
+    @apply bg-arcade-background;
+  }
+
+  body {
+    @apply bg-arcade-background text-arcade-white antialiased;
+  }
+}

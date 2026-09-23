@@ -24,7 +24,7 @@ export function SectionHeader({
       )}
       <div className="flex flex-col items-center gap-1">
         {subtitle && (
-          <p className="font-sans text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
+          <p className="text-center font-sans text-lg font-semibold leading-7 text-arcade-footer-text sm:text-xl">
             {subtitle}
           </p>
         )}

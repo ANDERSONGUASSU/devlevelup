@@ -5,6 +5,7 @@ import { HeroEyebrow } from '../components/hero/HeroEyebrow'
 import { HeroScene } from '../components/hero/HeroScene'
 import { HeroStats } from '../components/hero/HeroStats'
 import { HeroTitle } from '../components/hero/HeroTitle'
+import { ArcadePanel } from '../components/ui/ArcadePanel'
 import { cn } from '../lib/utils'
 
 interface HeroProps {
@@ -21,11 +22,13 @@ export function Hero({ className }: HeroProps) {
     >
       <HeroBackground />
 
-      <div className="relative flex w-full flex-col gap-7 lg:w-155">
-        <HeroEyebrow />
-        <HeroTitle />
-        <HeroDescription />
-        <HeroActions />
+      <div className="relative flex w-full flex-col gap-6 lg:w-155">
+        <ArcadePanel className="flex flex-col gap-6">
+          <HeroEyebrow />
+          <HeroTitle />
+          <HeroDescription />
+          <HeroActions />
+        </ArcadePanel>
         <HeroStats />
       </div>
 

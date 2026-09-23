@@ -2,7 +2,7 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 import { cn } from '../../lib/utils'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'cta'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'cta' | 'cyan'
   size?: 'sm' | 'md' | 'lg'
   href?: string
 }
@@ -40,6 +40,7 @@ const variantClasses: Record<NonNullable<ButtonProps['variant']>, string> = {
     'border border-arcade-secondary text-arcade-secondary hover:bg-arcade-secondary hover:text-arcade-950',
   ghost: 'text-arcade-muted hover:text-arcade-ghost',
   cta: 'bg-arcade-yellow text-arcade-950 hover:bg-arcade-yellow-shadow',
+  cyan: 'bg-arcade-cyan text-arcade-950 hover:bg-arcade-secondary',
 }
 
 const sizeClasses: Record<NonNullable<ButtonProps['size']>, string> = {

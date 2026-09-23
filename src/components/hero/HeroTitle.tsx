@@ -10,7 +10,7 @@ export function HeroTitle({ className }: HeroTitleProps) {
   return (
     <h1
       className={cn(
-        'font-pixel text-2xl leading-[1.1] text-arcade-cyan text-shadow-arcade-title sm:text-3xl lg:text-[46px]',
+        'font-pixel text-2xl leading-[1.1] text-arcade-footer-heading text-shadow-arcade-title sm:text-3xl lg:text-[38px]',
         className,
       )}
     >

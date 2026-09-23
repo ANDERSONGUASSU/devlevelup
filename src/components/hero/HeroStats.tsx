@@ -20,7 +20,7 @@ export function HeroStats({ className }: HeroStatsProps) {
           {index > 0 && (
             <span aria-hidden="true" className="h-8 w-px bg-arcade-white/8" />
           )}
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col items-center justify-center gap-0.5 text-center">
             <span className="font-pixel text-base leading-none text-arcade-cyan lg:text-xl">
               <CountUp value={stat.value} />
             </span>

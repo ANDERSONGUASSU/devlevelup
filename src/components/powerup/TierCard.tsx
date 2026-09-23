@@ -20,24 +20,24 @@ export function TierCard({
   return (
     <article
       className={cn(
-        'flex flex-col gap-4 rounded-2xl border bg-arcade-powerup-card p-8 backdrop-blur-xl',
+        'flex flex-col gap-4 rounded-2xl border bg-arcade-powerup-card p-8 backdrop-blur-xl transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none',
         featured
-          ? 'border-arcade-purple-glow shadow-arcade-tier-featured'
-          : 'border-arcade-nav-border shadow-arcade-powerup-card',
+          ? 'border-arcade-purple-glow shadow-arcade-tier-featured hover:shadow-arcade-tier-featured'
+          : 'border-arcade-nav-border shadow-arcade-powerup-card hover:border-arcade-cyan/60 hover:shadow-arcade-card-glow',
         className,
       )}
     >
       {featured && featuredLabel && (
-        <span className="self-start rounded-full border border-arcade-purple-glow bg-arcade-purple-badge px-2.5 py-1.5 font-inter text-xs font-bold uppercase tracking-wider text-arcade-purple-glow">
+        <span className="self-start rounded-full border border-arcade-purple-glow bg-arcade-purple-badge px-2.5 py-1.5 font-sora text-xs font-bold uppercase tracking-wider text-arcade-purple-glow">
           {featuredLabel}
         </span>
       )}
-      <h3 className="font-inter text-xl font-semibold leading-6 text-arcade-footer-heading">
+      <h3 className="font-sans text-xl font-semibold leading-6 text-arcade-footer-heading">
         {name}
       </h3>
       <p
         className={cn(
-          'font-inter font-bold leading-8',
+          'font-sans font-bold leading-8',
           featured
             ? 'text-[28px] text-arcade-purple-glow'
             : 'text-2xl text-arcade-cyan',

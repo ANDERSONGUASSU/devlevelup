@@ -16,10 +16,10 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
           <Fragment key={level.level}>
             <li
               className={cn(
-                'relative flex w-full max-w-64 flex-col items-center gap-4 overflow-hidden rounded-2xl border p-6 text-center lg:flex-1',
+                'relative flex w-full max-w-64 flex-col items-center gap-4 overflow-hidden rounded-2xl border p-6 text-center transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none lg:flex-1',
                 level.current
-                  ? 'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow'
-                  : 'border-arcade-card-border bg-arcade-comparison-card',
+                  ? 'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow hover:border-arcade-purple-glow hover:shadow-arcade-tier-featured'
+                  : 'border-arcade-card-border bg-arcade-comparison-card hover:border-arcade-cyan/60 hover:shadow-arcade-card-glow',
               )}
             >
               {level.locked && (
@@ -51,16 +51,16 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
               <div className="flex items-center gap-2">
                 <LevelNode level={level} />
                 {level.current && (
-                  <span className="rounded-full border border-arcade-neon bg-arcade-neon/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-wider text-arcade-neon">
+                  <span className="rounded-full border border-arcade-neon bg-arcade-neon/10 px-3 py-1 font-sora text-[10px] font-semibold uppercase tracking-wider text-arcade-neon">
                     {levelUpCopy.currentLabel}
                   </span>
                 )}
               </div>
               <div className="flex flex-col gap-1">
-                <p className="font-inter text-base font-bold text-arcade-white">
+                <p className="font-sans text-base font-bold text-arcade-white">
                   {level.name}
                 </p>
-                <p className="font-inter text-xs leading-4 text-arcade-text-secondary">
+                <p className="font-sans text-xs leading-4 text-arcade-text-secondary">
                   {level.description}
                 </p>
               </div>
@@ -69,7 +69,7 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
               <li className="flex items-center justify-center lg:w-24 lg:self-center">
                 <div className="flex w-full items-center gap-2">
                   <span className="hidden h-px flex-1 bg-linear-to-r from-arcade-cyan to-arcade-yellow lg:block" />
-                  <span className="flex items-center gap-1 rounded-full bg-arcade-cyan-badge px-2 py-1 font-inter text-[10px] font-bold text-arcade-cyan">
+                  <span className="flex items-center gap-1 rounded-full bg-arcade-cyan-badge px-2 py-1 font-sora text-[10px] font-bold text-arcade-cyan">
                     <BoltIcon className="size-3" />
                     {levelUpCopy.xpLabel}
                     <ArrowRightIcon className="size-3" />

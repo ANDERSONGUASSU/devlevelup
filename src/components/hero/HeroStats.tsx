@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { heroStats } from '../../data/hero'
+import { CountUp } from '../ui/CountUp'
 import { cn } from '../../lib/utils'
 
 interface HeroStatsProps {
@@ -15,10 +16,10 @@ export function HeroStats({ className }: HeroStatsProps) {
             <span aria-hidden="true" className="h-9 w-px bg-arcade-divider" />
           )}
           <div className="flex flex-col gap-0.5">
-            <span className="font-inter text-xl font-extrabold text-arcade-cyan">
-              {stat.value}
+            <span className="font-sans text-xl font-extrabold text-arcade-cyan">
+              <CountUp value={stat.value} />
             </span>
-            <span className="font-inter text-[11px] text-arcade-text-secondary">
+            <span className="font-sans text-[11px] text-arcade-text-secondary">
               {stat.label}
             </span>
           </div>

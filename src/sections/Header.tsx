@@ -64,12 +64,9 @@ export function Header({ className }: HeaderProps) {
           />
           <a
             href={siteConfig.links.apoia}
-            className="inline-flex h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary sm:h-auto sm:px-5 sm:py-2.5"
+            className="hidden h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary md:inline-flex md:px-5 md:py-2.5"
           >
-            <span className="sm:hidden">{'Apoiar'}</span>
-            <span className="hidden sm:inline">
-              {'Apoiar a partir de R$ 2,00'}
-            </span>
+            {'Apoiar a partir de R$ 2,00'}
           </a>
           <button
             type="button"
@@ -109,6 +106,18 @@ export function Header({ className }: HeaderProps) {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={siteConfig.links.apoia}
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary"
+              >
+                <span className="sm:hidden">{'Apoiar'}</span>
+                <span className="hidden sm:inline">
+                  {'Apoiar a partir de R$ 2,00'}
+                </span>
+              </a>
+            </li>
           </ul>
         </nav>
       )}

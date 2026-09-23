@@ -19,12 +19,12 @@ export function ComparisonCta({ className }: ComparisonCtaProps) {
         />
         <a
           href={siteConfig.links.apoia}
-          className="rounded-lg bg-arcade-cyan px-8 py-3.5 font-sans text-base font-bold leading-6 text-arcade-footer shadow-arcade-cta-cyan-lg transition-colors hover:bg-arcade-secondary"
+          className="inline-flex h-12 max-w-full items-center justify-center rounded-lg bg-arcade-cyan px-4 text-center font-sans text-sm font-bold leading-5 text-arcade-footer shadow-arcade-cta-cyan-lg transition-colors hover:bg-arcade-secondary sm:px-6"
         >
           {comparisonCopy.cta}
         </a>
       </div>
-      <p className="font-sans text-xs font-semibold leading-4 text-arcade-footer-text">
+      <p className="text-center font-sans text-xs font-semibold leading-4 text-arcade-footer-text">
         {comparisonCopy.ctaSubtext}
       </p>
     </div>

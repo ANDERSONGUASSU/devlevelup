@@ -15,7 +15,7 @@ export function HeroActions({ className }: HeroActionsProps) {
         href={siteConfig.links.apoia}
         variant="cta"
         size="lg"
-        className="rounded-md px-7 py-3.5 font-inter tracking-[0.04em] shadow-arcade-cta after:hidden"
+        className="rounded-md px-7 py-3.5 font-sans tracking-[0.04em] shadow-arcade-cta after:hidden"
       >
         <HeartIcon className="size-4" />
         {heroCopy.primaryCta}
@@ -24,7 +24,7 @@ export function HeroActions({ className }: HeroActionsProps) {
         href="#jornada"
         variant="secondary"
         size="lg"
-        className="rounded-md border-2 px-6 py-3.25 font-inter tracking-[0.04em] after:hidden"
+        className="rounded-md border-2 px-6 py-3.25 font-sans tracking-[0.04em] after:hidden"
       >
         <PlayIcon className="size-4" />
         {heroCopy.secondaryCta}

@@ -27,7 +27,7 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
         className,
       )}
     >
-      <ol className="relative flex flex-col items-center gap-8 lg:flex-row lg:items-stretch lg:justify-between">
+      <ol className="relative flex flex-col items-center gap-8 lg:flex-row lg:flex-wrap lg:items-stretch lg:justify-center lg:gap-2">
         {levelUpCopy.levels.map((level, index) => {
           const unlocked = index < unlockedCount
           const current = index === unlockedCount - 1
@@ -39,7 +39,7 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
                 alt={level.name}
                 loading="lazy"
                 className={cn(
-                  'size-44 object-contain',
+                  'size-44 object-contain lg:size-36',
                   !unlocked && 'opacity-40 saturate-50',
                 )}
               />
@@ -57,7 +57,7 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
                 alt={level.name}
                 loading="lazy"
                 className={cn(
-                  'size-44 object-contain',
+                  'size-44 object-contain lg:size-36',
                   !unlocked && 'opacity-40 saturate-50',
                 )}
               />
@@ -74,7 +74,7 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
             <Fragment key={level.level}>
               <li
                 className={cn(
-                  'relative flex w-full max-w-64 flex-col items-center gap-4 overflow-hidden rounded-2xl border p-6 text-center transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none lg:flex-1',
+                  'relative flex w-full max-w-64 flex-col items-center gap-4 overflow-hidden rounded-2xl border p-6 text-center transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none lg:w-52 lg:flex-none',
                   current
                     ? 'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow hover:border-arcade-purple-glow hover:shadow-arcade-tier-featured'
                     : 'border-arcade-card-border bg-arcade-comparison-card hover:border-arcade-cyan/60 hover:shadow-arcade-card-glow',
@@ -129,15 +129,13 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
                 </div>
               </li>
               {index < levelUpCopy.levels.length - 1 && (
-                <li className="flex items-center justify-center lg:w-24 lg:self-center">
-                  <div className="flex w-full items-center gap-2">
-                    <span className="hidden h-px flex-1 bg-linear-to-r from-arcade-cyan to-arcade-yellow lg:block" />
+                <li className="flex items-center justify-center lg:w-16 lg:self-center">
+                  <div className="flex w-full items-center justify-center">
                     <span className="flex items-center gap-1 rounded-full bg-arcade-cyan-badge px-2 py-1 font-sora text-[10px] font-bold text-arcade-cyan">
                       <BoltIcon className="size-3" />
                       {levelUpCopy.xpLabel}
                       <ArrowRightIcon className="size-3" />
                     </span>
-                    <span className="hidden h-px flex-1 bg-linear-to-r from-arcade-yellow to-arcade-cyan lg:block" />
                   </div>
                 </li>
               )}

@@ -5,6 +5,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'ghost' | 'cta' | 'cyan'
   size?: 'sm' | 'md' | 'lg'
   href?: string
+  target?: string
+  rel?: string
 }
 
 export function Button({
@@ -12,6 +14,8 @@ export function Button({
   variant = 'primary',
   size = 'md',
   href,
+  target,
+  rel,
   ...props
 }: ButtonProps) {
   const classes = cn(
@@ -25,6 +29,8 @@ export function Button({
     return (
       <a
         href={href}
+        target={target}
+        rel={rel}
         className={classes}
         {...(props as unknown as AnchorHTMLAttributes<HTMLAnchorElement>)}
       />

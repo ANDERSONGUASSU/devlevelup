@@ -80,6 +80,7 @@
   --color-arcade-purple-badge: rgba(139, 92, 246, 0.15);
   --color-arcade-mascot-glow: rgba(0, 240, 255, 0.5);
   --color-arcade-mascot-glow-mid: rgba(0, 240, 255, 0.2);
+  --color-arcade-mascot-glow-end: rgba(0, 240, 255, 0);
   --color-arcade-panel: rgba(9, 13, 22, 0.18);
   --color-arcade-stats-bar: rgba(9, 13, 22, 0.15);
   --background-image-hero-scrim: linear-gradient(
@@ -103,6 +104,7 @@
   --shadow-arcade-progress-fill: 0 0 14px rgba(0, 240, 255, 0.33);
   --shadow-arcade-panel: 0 0 30px rgba(0, 240, 255, 0.08);
   --shadow-arcade-stats-bar: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --drop-shadow-arcade-mascot: 0 0 12px rgba(0, 240, 255, 0.3);
 
   --text-shadow-arcade-title:
     0 0 18px rgba(0, 240, 255, 0.2), 0 0 10px rgba(0, 240, 255, 0.4);

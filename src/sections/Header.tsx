@@ -5,6 +5,7 @@ import {
   SouJuniorMark,
   SouJuniorWordmark,
 } from '../components/ui/icons'
+import { Mascot } from '../components/ui/Mascot'
 import { siteConfig } from '../config'
 import { navLinks } from '../data/nav'
 import { cn } from '../lib/utils'
@@ -56,12 +57,7 @@ export function Header({ className }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <img
-            src="/images/mascote-soujunior.png"
-            alt="Mascote SouJunior"
-            loading="eager"
-            className="hidden size-15 rounded-lg object-contain sm:block"
-          />
+          <Mascot loading="eager" className="hidden sm:block" />
           <a
             href={siteConfig.links.apoia}
             className="hidden h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary md:inline-flex md:px-5 md:py-2.5"

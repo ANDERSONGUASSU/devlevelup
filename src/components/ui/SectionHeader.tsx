@@ -29,7 +29,7 @@ export function SectionHeader({
           </p>
         )}
         {title && (
-          <h2 className="font-sans text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
+          <h2 className="text-center font-sans text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
             {title}
           </h2>
         )}

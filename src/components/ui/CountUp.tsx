@@ -21,7 +21,7 @@ export function CountUp({ value, className }: CountUpProps) {
   const { ref, inView } = useInView<HTMLSpanElement>()
   const { prefix, number, suffix } = parseValue(value)
   const current = useCountUp(number, { start: inView })
-  const finalValue = value
+  const finalValue = `${prefix}${number}${suffix}`
 
   return (
     <span ref={ref} className={cn('tabular-nums', className)}>

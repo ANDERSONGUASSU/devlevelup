@@ -1,6 +1,7 @@
 import { LevelUpPath } from '../components/levelup/LevelUpPath'
-import { Glow } from '../components/ui/Glow'
+import { SquadGlows } from '../components/squad/SquadGlows'
 import { SectionHeader } from '../components/ui/SectionHeader'
+import { Starfield } from '../components/ui/Starfield'
 import { levelUpCopy } from '../data/levelup'
 import { cn } from '../lib/utils'
 
@@ -17,23 +18,23 @@ export function LevelUp({ className }: LevelUpProps) {
         className,
       )}
     >
-      <Glow className="-left-40 top-40 size-125" />
-      <Glow className="-right-40 top-64 size-125" />
-      <img
-        src="/images/grid-texture.svg"
-        alt=""
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-x-0 top-0 h-132 bg-[radial-gradient(50%_50%_at_50%_20%,var(--color-arcade-900)_0%,var(--color-arcade-footer)_70%,var(--color-arcade-footer)_100%)]"
       />
+      <SquadGlows />
+
+      <Starfield />
 
       <SectionHeader
         badge={levelUpCopy.badge}
         subtitle={levelUpCopy.subtitle}
         title={levelUpCopy.title}
         description={levelUpCopy.description}
+        className="relative z-10"
       />
 
-      <LevelUpPath className="relative w-full" />
+      <LevelUpPath className="relative z-10 w-full" />
 
       <div
         aria-hidden="true"

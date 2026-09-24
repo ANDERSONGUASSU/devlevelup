@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useMemo, useState } from 'react'
 import {
   CloseIcon,
   MenuIcon,
@@ -8,6 +8,7 @@ import {
 import { Mascot } from '../components/ui/Mascot'
 import { siteConfig } from '../config'
 import { navLinks } from '../data/nav'
+import { useActiveSection } from '../hooks/useActiveSection'
 import { cn } from '../lib/utils'
 
 interface HeaderProps {
@@ -16,14 +17,12 @@ interface HeaderProps {
 
 export function Header({ className }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const sectionIds = useMemo(
+    () => navLinks.map((link) => link.href.slice(1)),
+    [],
+  )
+  const activeSection = useActiveSection(sectionIds)
 
   const handleMobileNavClick = (href: string) => {
     setMenuOpen(false)
@@ -38,10 +37,7 @@ export function Header({ className }: HeaderProps) {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color] duration-300',
-        scrolled
-          ? 'border-arcade-nav-border bg-arcade-navbar backdrop-blur'
-          : 'border-transparent bg-transparent',
+        'fixed inset-x-0 top-0 z-50 border-b border-arcade-nav-border bg-arcade-navbar backdrop-blur',
         className,
       )}
     >
@@ -61,20 +57,24 @@ export function Header({ className }: HeaderProps) {
           className="hidden items-center gap-8 md:flex"
           aria-label="Navegação principal"
         >
-          {navLinks.map((link, index) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'font-sans text-sm font-medium transition-colors',
-                index === 0
-                  ? 'text-arcade-cyan text-shadow-arcade-nav'
-                  : 'text-arcade-nav-muted hover:text-arcade-cyan',
-              )}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.href.slice(1) === activeSection
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? 'true' : undefined}
+                className={cn(
+                  'relative font-sans text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-arcade-cyan after:transition-opacity',
+                  isActive
+                    ? 'text-arcade-cyan text-shadow-arcade-nav after:opacity-100'
+                    : 'text-arcade-nav-muted hover:text-arcade-cyan after:opacity-0',
+                )}
+              >
+                {link.label}
+              </a>
+            )
+          })}
         </nav>
 
         <div className="flex items-center gap-3">
@@ -109,22 +109,26 @@ export function Header({ className }: HeaderProps) {
           aria-label="Menu móvel"
         >
           <ul className="flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => handleMobileNavClick(link.href)}
-                  className={cn(
-                    'font-sans text-sm font-medium transition-colors',
-                    index === 0
-                      ? 'text-arcade-cyan text-shadow-arcade-nav'
-                      : 'text-arcade-nav-muted hover:text-arcade-cyan',
-                  )}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href.slice(1) === activeSection
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={() => handleMobileNavClick(link.href)}
+                    aria-current={isActive ? 'true' : undefined}
+                    className={cn(
+                      'relative font-sans text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-arcade-cyan after:transition-opacity',
+                      isActive
+                        ? 'text-arcade-cyan text-shadow-arcade-nav after:opacity-100'
+                        : 'text-arcade-nav-muted hover:text-arcade-cyan after:opacity-0',
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              )
+            })}
             <li>
               <a
                 href={siteConfig.links.apoia}

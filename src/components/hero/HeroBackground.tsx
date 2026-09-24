@@ -16,8 +16,7 @@ export function HeroBackground({ className }: HeroBackgroundProps) {
         className="absolute inset-0 h-full w-full object-cover object-right"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-arcade-background/60" />
-      <div className="absolute inset-0 bg-linear-to-r from-arcade-background via-arcade-background/40 to-transparent" />
+      <div className="absolute inset-0 bg-hero-scrim" />
     </div>
   )
 }

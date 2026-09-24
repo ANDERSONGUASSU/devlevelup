@@ -18,18 +18,18 @@ export function SectionHeader({
   return (
     <div className={cn('flex flex-col items-center gap-4', className)}>
       {badge && (
-        <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-4 py-1.5 font-inter text-xs font-semibold uppercase tracking-wider text-arcade-cyan">
+        <span className="rounded-full border border-arcade-cyan-badge-border bg-arcade-cyan-badge px-4 py-1.5 font-sora text-xs font-semibold uppercase tracking-wider text-arcade-cyan">
           {badge}
         </span>
       )}
       <div className="flex flex-col items-center gap-1">
         {subtitle && (
-          <p className="font-inter text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
+          <p className="text-center font-sans text-lg font-semibold leading-7 text-arcade-footer-text sm:text-xl">
             {subtitle}
           </p>
         )}
         {title && (
-          <h2 className="font-inter text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
+          <h2 className="text-center font-sans text-2xl font-bold leading-10 text-arcade-white sm:text-3xl lg:text-[32px]">
             {title}
           </h2>
         )}

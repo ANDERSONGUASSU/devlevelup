@@ -14,7 +14,7 @@ export function Squad({ className }: SquadProps) {
     <section
       id="squads"
       className={cn(
-        'relative flex flex-col items-center gap-16 overflow-hidden bg-arcade-footer px-6 py-20 lg:px-20 lg:py-28',
+        'relative flex flex-col items-center gap-16 overflow-hidden bg-arcade-footer px-6 py-20 lg:px-20 lg:py-30',
         className,
       )}
     >

@@ -4,7 +4,7 @@ export const siteConfig = {
     'Landing page com estética 16 bits (dark arcade) do projeto DevLevelUp — Hackathon SouJunior.',
   language: 'pt-BR',
   links: {
-    apoia: 'https://apoia.se',
+    apoia: 'https://apoia.se/soujunior',
     github: 'https://github.com',
     discord: 'https://discord.gg/soujunior',
     whatsapp: 'https://wa.me/5500000000000',

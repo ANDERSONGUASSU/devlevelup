@@ -7,19 +7,22 @@ interface HeroSceneProps {
 
 export function HeroScene({ className }: HeroSceneProps) {
   return (
-    <div className={cn('relative w-full max-w-155 lg:hidden', className)}>
-      <div className="relative aspect-620/460 overflow-hidden rounded-xl">
-        <img
-          src="/images/rpg-scene.png"
-          alt={heroCopy.sceneAlt}
-          className="h-full w-full object-cover"
-          loading="eager"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-arcade-scene-overlay"
-        />
-      </div>
+    <div
+      className={cn(
+        'absolute inset-x-0 top-0 h-[60vh] min-h-[420px] overflow-hidden lg:hidden',
+        className,
+      )}
+    >
+      <img
+        src="/images/rpg-scene.png"
+        alt={heroCopy.sceneAlt}
+        className="absolute inset-0 h-full w-full object-cover object-[75%_50%]"
+        loading="eager"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-arcade-scene-overlay"
+      />
     </div>
   )
 }

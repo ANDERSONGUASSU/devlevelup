@@ -1,22 +1,23 @@
-import { BoltIcon, XCircleIcon } from '../ui/icons'
+import { type LucideIcon } from 'lucide-react'
 import { cn } from '../../lib/utils'
 
 interface ComparisonCardProps {
   variant: 'isolated' | 'ecosystem'
   eyebrow: string
   title: string
-  bullets: readonly string[]
+  bullets: readonly { text: string; icon: LucideIcon }[]
   className?: string
 }
 
 const cardClasses = {
-  isolated: 'border-arcade-card-border bg-arcade-comparison-card',
+  isolated:
+    'border-arcade-card-border bg-arcade-comparison-card hover:border-arcade-cyan/60 hover:shadow-arcade-card-glow',
   ecosystem:
-    'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow backdrop-blur-xl',
+    'border-arcade-cyan bg-arcade-comparison-card-active shadow-arcade-card-glow hover:border-arcade-purple-glow hover:shadow-arcade-tier-featured backdrop-blur-xl',
 } as const
 
 const eyebrowClasses = {
-  isolated: 'text-arcade-footer-text',
+  isolated: 'text-arcade-cyan',
   ecosystem: 'text-arcade-cyan',
 } as const
 
@@ -33,12 +34,10 @@ export function ComparisonCard({
   bullets,
   className,
 }: ComparisonCardProps) {
-  const Icon = variant === 'ecosystem' ? BoltIcon : XCircleIcon
-
   return (
     <article
       className={cn(
-        'flex flex-col gap-6 rounded-2xl border p-8 lg:h-95',
+        'flex flex-col gap-6 rounded-2xl border p-8 transition-[transform,border-color,box-shadow] duration-200 ease-in-out hover:-translate-y-0.5 motion-reduce:transform-none lg:h-95',
         cardClasses[variant],
         className,
       )}
@@ -46,30 +45,30 @@ export function ComparisonCard({
       <div className="flex flex-col gap-3">
         <p
           className={cn(
-            'font-inter text-xs font-semibold uppercase tracking-wider',
+            'font-sora text-xs font-semibold uppercase tracking-wider',
             eyebrowClasses[variant],
           )}
         >
           {eyebrow}
         </p>
-        <h3 className="font-inter text-xl font-semibold leading-6.5 text-arcade-footer-heading">
+        <h3 className="font-sans text-xl font-semibold leading-6.5 text-arcade-footer-heading">
           {title}
         </h3>
       </div>
 
       <ul className="flex flex-col gap-4">
         {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-start gap-3">
+          <li key={bullet.text} className="flex items-start gap-3">
             <span
               className={cn(
                 'flex size-6 shrink-0 items-center justify-center rounded-md border',
                 iconBoxClasses[variant],
               )}
             >
-              <Icon className="size-3" />
+              <bullet.icon className="size-3" />
             </span>
-            <p className="font-inter text-sm font-medium leading-5 text-arcade-comparison-bullet">
-              {bullet}
+            <p className="font-sans text-sm font-medium leading-5 text-arcade-comparison-bullet">
+              {bullet.text}
             </p>
           </li>
         ))}

@@ -3,8 +3,6 @@ export interface LevelData {
   name: string
   description: string
   image: string
-  locked?: boolean
-  current?: boolean
 }
 
 export interface LevelUpCopy {
@@ -14,17 +12,21 @@ export interface LevelUpCopy {
   description: string
   currentLabel: string
   xpLabel: string
+  unlockCta: string
+  unlockCompleteCta: string
   levels: LevelData[]
 }
 
 export const levelUpCopy: LevelUpCopy = {
   badge: '⚡ LEVEL-UP SYSTEM',
-  subtitle: 'Todo mundo começa pequeno:',
-  title: 'A jornada de evolução',
+  subtitle: '',
+  title: 'Todo mundo começa pequeno: A jornada de evolução',
   description:
     'Cada nível desbloqueia novas habilidades, suporte e oportunidades na comunidade.',
   currentLabel: 'Nível Atual',
   xpLabel: '+XP',
+  unlockCta: 'Desbloquear personagem',
+  unlockCompleteCta: 'Ajude no Apoia.se',
   levels: [
     {
       level: 'LV. 1',
@@ -43,21 +45,18 @@ export const levelUpCopy: LevelUpCopy = {
       name: 'Membro Squad',
       description: 'Projetos open-source em equipe',
       image: '/images/personagens/level3.png',
-      current: true,
     },
     {
       level: 'LV. 4',
       name: 'Contribuidor',
       description: 'Projetos públicos reais',
       image: '/images/personagens/level4.png',
-      locked: true,
     },
     {
       level: 'LV. 5',
       name: 'Pronto pro Mercado',
       description: 'Contratação e liderança',
       image: '/images/personagens/level5.png',
-      locked: true,
     },
   ],
 }

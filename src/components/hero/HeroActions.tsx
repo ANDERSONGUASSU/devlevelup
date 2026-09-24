@@ -10,21 +10,27 @@ interface HeroActionsProps {
 
 export function HeroActions({ className }: HeroActionsProps) {
   return (
-    <div className={cn('flex flex-wrap items-center gap-4', className)}>
+    <div
+      className={cn(
+        'flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4',
+        className,
+      )}
+    >
       <Button
         href={siteConfig.links.apoia}
-        variant="cta"
+        variant="cyan"
         size="lg"
-        className="rounded-md px-7 py-3.5 font-inter tracking-[0.04em] shadow-arcade-cta after:hidden"
+        className="w-full justify-center rounded-lg px-4 py-3.5 font-sans text-[13px] tracking-[0.04em] shadow-arcade-hero-cta after:hidden lg:w-auto lg:rounded-xl lg:px-5 lg:shadow-arcade-cta-cyan"
       >
         <HeartIcon className="size-4" />
         {heroCopy.primaryCta}
       </Button>
       <Button
         href="#jornada"
+        target="_self"
         variant="secondary"
         size="lg"
-        className="rounded-md border-2 px-6 py-3.25 font-inter tracking-[0.04em] after:hidden"
+        className="w-full justify-center rounded-lg border-[1.5px] px-4 py-3.5 font-sans text-[13px] tracking-[0.04em] after:hidden lg:w-auto lg:rounded-xl lg:border-2 lg:px-4"
       >
         <PlayIcon className="size-4" />
         {heroCopy.secondaryCta}

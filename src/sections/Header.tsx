@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import {
   CloseIcon,
   MenuIcon,
   SouJuniorMark,
   SouJuniorWordmark,
 } from '../components/ui/icons'
+import { Mascot } from '../components/ui/Mascot'
 import { siteConfig } from '../config'
 import { navLinks } from '../data/nav'
+import { useActiveSection } from '../hooks/useActiveSection'
 import { cn } from '../lib/utils'
 
 interface HeaderProps {
@@ -16,10 +18,26 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const sectionIds = useMemo(
+    () => navLinks.map((link) => link.href.slice(1)),
+    [],
+  )
+  const activeSection = useActiveSection(sectionIds)
+
+  const handleMobileNavClick = (href: string) => {
+    setMenuOpen(false)
+    if (!href.startsWith('#')) return
+
+    const id = href.slice(1)
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    })
+  }
+
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 border-b border-arcade-nav-border bg-arcade-navbar backdrop-blur',
+        'fixed inset-x-0 top-0 z-50 border-b border-arcade-nav-border bg-arcade-navbar backdrop-blur',
         className,
       )}
     >
@@ -39,37 +57,35 @@ export function Header({ className }: HeaderProps) {
           className="hidden items-center gap-8 md:flex"
           aria-label="Navegação principal"
         >
-          {navLinks.map((link, index) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'font-sans text-sm font-medium transition-colors',
-                index === 0
-                  ? 'text-arcade-cyan text-shadow-arcade-nav'
-                  : 'text-arcade-nav-muted hover:text-arcade-cyan',
-              )}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.href.slice(1) === activeSection
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? 'true' : undefined}
+                className={cn(
+                  'relative font-sans text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-arcade-cyan after:transition-opacity',
+                  isActive
+                    ? 'text-arcade-cyan text-shadow-arcade-nav after:opacity-100'
+                    : 'text-arcade-nav-muted hover:text-arcade-cyan after:opacity-0',
+                )}
+              >
+                {link.label}
+              </a>
+            )
+          })}
         </nav>
 
         <div className="flex items-center gap-3">
-          <img
-            src="/images/mascote-soujunior.png"
-            alt="Mascote SouJunior"
-            loading="eager"
-            className="hidden size-15 rounded-lg object-contain sm:block"
-          />
+          <Mascot loading="eager" className="hidden sm:block" />
           <a
             href={siteConfig.links.apoia}
-            className="inline-flex h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary sm:h-auto sm:px-5 sm:py-2.5"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary md:inline-flex md:px-5 md:py-2.5"
           >
-            <span className="sm:hidden">{'Apoiar'}</span>
-            <span className="hidden sm:inline">
-              {'Apoiar a partir de R$ 2,00'}
-            </span>
+            {'Apoiar a partir de R$ 2,00'}
           </a>
           <button
             type="button"
@@ -93,22 +109,40 @@ export function Header({ className }: HeaderProps) {
           aria-label="Menu móvel"
         >
           <ul className="flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={cn(
-                    'font-sans text-sm font-medium transition-colors',
-                    index === 0
-                      ? 'text-arcade-cyan text-shadow-arcade-nav'
-                      : 'text-arcade-nav-muted hover:text-arcade-cyan',
-                  )}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href.slice(1) === activeSection
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={() => handleMobileNavClick(link.href)}
+                    aria-current={isActive ? 'true' : undefined}
+                    className={cn(
+                      'relative font-sans text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-arcade-cyan after:transition-opacity',
+                      isActive
+                        ? 'text-arcade-cyan text-shadow-arcade-nav after:opacity-100'
+                        : 'text-arcade-nav-muted hover:text-arcade-cyan after:opacity-0',
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              )
+            })}
+            <li>
+              <a
+                href={siteConfig.links.apoia}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary"
+              >
+                <span className="sm:hidden">{'Apoiar'}</span>
+                <span className="hidden sm:inline">
+                  {'Apoiar a partir de R$ 2,00'}
+                </span>
+              </a>
+            </li>
           </ul>
         </nav>
       )}

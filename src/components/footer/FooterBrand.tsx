@@ -18,7 +18,7 @@ export function FooterBrand({ className }: FooterBrandProps) {
         }
       </p>
       <span className="inline-flex w-fit items-center rounded-full border border-arcade-cyan px-2.5 py-1">
-        <span className="font-inter text-xs font-bold text-arcade-cyan">
+        <span className="font-sora text-xs font-bold text-arcade-cyan">
           {'[ECOSSISTEMA OPEN-SOURCE]'}
         </span>
       </span>

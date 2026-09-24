@@ -1,25 +1,31 @@
-import type { LevelData } from '../../data/levelup'
 import { cn } from '../../lib/utils'
 
 interface LevelNodeProps {
-  level: LevelData
+  label: string
+  unlocked: boolean
+  current: boolean
   className?: string
 }
 
-export function LevelNode({ level, className }: LevelNodeProps) {
+export function LevelNode({
+  label,
+  unlocked,
+  current,
+  className,
+}: LevelNodeProps) {
   return (
     <div
       className={cn(
-        'flex h-7 w-14 shrink-0 items-center justify-center rounded-lg border font-inter text-xs font-bold',
-        level.current
+        'flex h-7 w-14 shrink-0 items-center justify-center rounded-lg border font-sora text-xs font-bold',
+        current
           ? 'border-arcade-cyan bg-arcade-cyan-icon text-arcade-cyan shadow-arcade-card-glow'
-          : level.locked
-            ? 'border-arcade-icon-border bg-arcade-comparison-card text-arcade-muted'
-            : 'border-arcade-cyan-badge-border bg-arcade-cyan-badge text-arcade-cyan',
+          : unlocked
+            ? 'border-arcade-cyan-badge-border bg-arcade-cyan-badge text-arcade-cyan'
+            : 'border-arcade-icon-border bg-arcade-comparison-card text-arcade-muted',
         className,
       )}
     >
-      {level.level}
+      {label}
     </div>
   )
 }

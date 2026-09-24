@@ -1,57 +1,44 @@
-@import '@fontsource/funnel-sans/latin-400.css';
-@import '@fontsource/funnel-sans/latin-500.css';
-@import '@fontsource/funnel-sans/latin-600.css';
-@import '@fontsource/funnel-sans/latin-700.css';
-@import '@fontsource/funnel-sans/latin-800.css';
-@import '@fontsource/funnel-display/latin-400.css';
-@import '@fontsource/funnel-display/latin-500.css';
-@import '@fontsource/funnel-display/latin-600.css';
-@import '@fontsource/funnel-display/latin-700.css';
 @import '@fontsource/press-start-2p/latin-400.css';
-@import '@fontsource/inter/latin-400.css';
-@import '@fontsource/inter/latin-600.css';
-@import '@fontsource/inter/latin-700.css';
-@import '@fontsource/inter/latin-800.css';
-@import '@fontsource/inter/latin-900.css';
 @import '@fontsource/roboto-flex/latin-400.css';
-
+@import '@fontsource/sora/latin-400.css';
+@import '@fontsource/sora/latin-500.css';
+@import '@fontsource/sora/latin-600.css';
+@import '@fontsource/sora/latin-700.css';
+@import '@fontsource/plus-jakarta-sans/latin-400.css';
+@import '@fontsource/plus-jakarta-sans/latin-500.css';
+@import '@fontsource/plus-jakarta-sans/latin-600.css';
+@import '@fontsource/plus-jakarta-sans/latin-700.css';
+@import '@fontsource/plus-jakarta-sans/latin-800.css';
 @import 'tailwindcss';
-
 @theme {
   --font-sans:
-    'Funnel Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display:
-    'Funnel Display', 'Funnel Sans', ui-sans-serif, system-ui, sans-serif;
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-pixel: 'Press Start 2P', 'Courier New', monospace;
-  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sora: 'Sora', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-roboto-flex: 'Roboto Flex', system-ui, -apple-system, sans-serif;
-
   --color-arcade-950: #07070d;
   --color-arcade-900: #10101c;
   --color-arcade-800: #1a1a2c;
   --color-arcade-700: #262640;
-
   --color-arcade-muted: #7d7da1;
   --color-arcade-ghost: #ececf6;
-
   --color-arcade-primary: #f43f5e;
   --color-arcade-secondary: #22d3ee;
   --color-arcade-accent: #eab308;
   --color-arcade-neon: #a3e635;
-
   --color-arcade-cyan: #00f0ff;
   --color-arcade-purple: #9d00ff;
   --color-arcade-yellow: #fddf01;
   --color-arcade-yellow-shadow: #ffb800;
   --color-arcade-text-secondary: #a3a3c2;
-
   --color-arcade-surface: #ffffff;
   --color-arcade-surface-variant: #eaddff;
   --color-arcade-on-surface: #1c1b1f;
   --color-arcade-on-surface-variant: #49454f;
   --color-arcade-outline: #cac4d0;
   --color-arcade-m3-primary: #6750a4;
-
   --color-arcade-background: #05050d;
   --color-arcade-glow: #0d1f5c;
   --color-arcade-cta-text: #0a0e2a;
@@ -63,11 +50,9 @@
   --color-arcade-footer-heading: #f8fafc;
   --color-arcade-footer-text: #cbd5e1;
   --color-arcade-footer-divider: rgba(255, 255, 255, 0.08);
-
   --color-arcade-navbar: rgba(9, 13, 22, 0.8);
   --color-arcade-nav-muted: #94a3b8;
   --color-arcade-nav-border: rgba(255, 255, 255, 0.08);
-
   --color-arcade-comparison-card: rgba(15, 23, 42, 0.4);
   --color-arcade-comparison-card-active: rgba(15, 23, 42, 0.6);
   --color-arcade-impact-card: #0f1123;
@@ -85,7 +70,22 @@
   --color-arcade-purple-badge: rgba(139, 92, 246, 0.15);
   --color-arcade-mascot-glow: rgba(0, 240, 255, 0.5);
   --color-arcade-mascot-glow-mid: rgba(0, 240, 255, 0.2);
-
+  --color-arcade-mascot-glow-end: rgba(0, 240, 255, 0);
+  --color-arcade-panel: rgba(9, 13, 22, 0.18);
+  --color-arcade-hud: rgba(10, 22, 40, 0.6);
+  --color-arcade-stats-bar: rgba(9, 13, 22, 0.15);
+  --color-arcade-tooltip: rgba(15, 23, 42, 0.85);
+  --color-arcade-role-pm: #4a9eff;
+  --color-arcade-role-ux: #a78bfa;
+  --color-arcade-role-dev: #00f0ff;
+  --color-arcade-role-qa: #fb923c;
+  --background-image-hero-scrim: linear-gradient(
+    90deg,
+    rgba(9, 13, 22, 0.45) 0%,
+    rgba(9, 13, 22, 0.15) 40%,
+    rgba(9, 13, 22, 0.03) 65%,
+    rgba(9, 13, 22, 0) 100%
+  );
   --shadow-arcade-glow: 0 0 8px rgba(0, 240, 255, 0.25);
   --shadow-arcade-cta: 0 4px 16px rgba(253, 223, 1, 0.4);
   --shadow-arcade-badge: 0 0 12px rgba(0, 240, 255, 0.4);
@@ -97,9 +97,48 @@
   --shadow-arcade-tier-featured:
     0 0 24px rgba(139, 92, 246, 0.4), 0 12px 32px -12px rgba(0, 0, 0, 0.25);
   --shadow-arcade-progress-fill: 0 0 14px rgba(0, 240, 255, 0.33);
+  --shadow-arcade-panel: 0 0 30px rgba(0, 240, 255, 0.08);
+  --shadow-arcade-stats-bar: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-arcade-hero-cta: 0 0 12px rgba(0, 240, 255, 0.35);
+  --drop-shadow-arcade-mascot: 0 0 12px rgba(0, 240, 255, 0.3);
+  --drop-shadow-arcade-sprite: 0 4px 14px rgba(0, 0, 0, 0.7);
 
-  --text-shadow-arcade-title: 0 0 20px rgba(0, 240, 255, 0.5);
+  --animate-sprite-float: sprite-float 2.4s ease-in-out infinite;
+  --animate-tooltip-enter: tooltip-enter 150ms ease-out both;
+
+  @keyframes sprite-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes tooltip-enter {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  --text-shadow-arcade-title:
+    0 0 18px rgba(0, 240, 255, 0.2), 0 0 10px rgba(0, 240, 255, 0.4);
   --text-shadow-arcade-nav: 0 0 8px rgba(0, 240, 255, 0.4);
   --text-shadow-arcade-impact: 0 0 12px rgba(0, 240, 255, 0.4);
   --text-shadow-arcade-powerup: 0 0 18px rgba(0, 240, 255, 0.4);
+}
+@layer base {
+  html {
+    @apply bg-arcade-background;
+    scroll-padding-top: 4.5rem;
+  }
+  body {
+    @apply bg-arcade-background text-arcade-white antialiased;
+  }
 }

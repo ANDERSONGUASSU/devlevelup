@@ -319,3 +319,29 @@ export function LockIcon({ className }: IconProps) {
     </svg>
   )
 }
+
+export function ExternalLinkIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M8.75 2.5H11.5V5.25"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11.25 8.5V11a.75.75 0 0 1-.75.75H3a.75.75 0 0 1-.75-.75V3.5a.75.75 0 0 1 .75-.75h2.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}

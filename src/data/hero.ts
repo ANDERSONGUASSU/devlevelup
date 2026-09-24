@@ -4,9 +4,9 @@ export interface HeroStat {
 }
 
 export const heroStats: HeroStat[] = [
-  { value: '+1200', label: 'Apoiadores' },
-  { value: '+1660', label: 'Parceiros' },
-  { value: '+360', label: 'Projetos Entregues' },
+  { value: '+1200', label: 'Apoiadores Parceiros' },
+  { value: '+1660', label: 'Projetos Entregues' },
+  { value: '+360', label: 'Comunidade' },
 ]
 
 export const heroCopy = {

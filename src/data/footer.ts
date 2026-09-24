@@ -39,3 +39,8 @@ export const socialLinks: SocialLink[] = [
   { label: 'WhatsApp', href: siteConfig.links.whatsapp, icon: 'whatsapp' },
   { label: 'GitHub', href: siteConfig.links.github, icon: 'github' },
 ]
+
+export const footerCopy = {
+  socialTitle: 'Canais Oficiais',
+  ctaLabel: 'Apoie R$ 2,00+ no Apoia.se',
+} as const

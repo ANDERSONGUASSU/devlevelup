@@ -7,7 +7,7 @@ import {
 } from '../ui/icons'
 import { Button } from '../ui/Button'
 import { siteConfig } from '../../config'
-import { socialLinks } from '../../data/footer'
+import { footerCopy, socialLinks } from '../../data/footer'
 import { cn } from '../../lib/utils'
 
 interface FooterSocialProps {
@@ -25,7 +25,7 @@ export function FooterSocial({ className }: FooterSocialProps) {
     <div className={cn('flex flex-col gap-6', className)}>
       <div className="flex flex-col gap-4">
         <h3 className="font-sans text-base font-semibold text-arcade-footer-heading">
-          {'Canais Oficiais'}
+          {footerCopy.socialTitle}
         </h3>
         <ul className="flex flex-col gap-4">
           {socialLinks.map((link) => {
@@ -51,9 +51,9 @@ export function FooterSocial({ className }: FooterSocialProps) {
         href={siteConfig.links.apoia}
         variant="cyan"
         size="lg"
-        className="w-fit shadow-arcade-cta-cyan hover:bg-arcade-cyan/90"
+        className="w-fit rounded-lg px-4 py-3.5 font-sans font-bold text-[13px] tracking-[0.04em] shadow-arcade-cta-cyan after:hidden lg:rounded-xl lg:px-5"
       >
-        {'Apoie R$ 2,00+ no Apoia.se'}
+        {footerCopy.ctaLabel}
         <ArrowRightIcon className="size-3.5" />
       </Button>
     </div>

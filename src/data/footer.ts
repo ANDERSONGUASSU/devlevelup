@@ -42,5 +42,5 @@ export const socialLinks: SocialLink[] = [
 
 export const footerCopy = {
   socialTitle: 'Canais Oficiais',
-  ctaLabel: 'Apoie R$ 2,00+ no Apoia.se',
+  ctaLabel: 'Apoie a partir de R$ 2',
 } as const

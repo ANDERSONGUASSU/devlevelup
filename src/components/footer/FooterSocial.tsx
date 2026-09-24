@@ -4,7 +4,6 @@ import {
   GitHubIcon,
   WhatsAppIcon,
 } from '../ui/icons'
-import { Button } from '../ui/Button'
 import { siteConfig } from '../../config'
 import { footerCopy, socialLinks } from '../../data/footer'
 import { cn } from '../../lib/utils'
@@ -45,15 +44,15 @@ export function FooterSocial({ className }: FooterSocialProps) {
           })}
         </ul>
       </div>
-      <Button
+      <a
         href={siteConfig.links.apoia}
-        variant="cyan"
-        size="lg"
-        className="w-fit rounded-lg px-4 py-3.5 font-sans font-bold text-[13px] tracking-[0.04em] shadow-arcade-cta-cyan after:hidden lg:rounded-xl lg:px-5"
+        target="_blank"
+        rel="noreferrer"
+        className="hidden h-10 w-fit items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary md:inline-flex md:px-5 md:py-2.5"
       >
         {footerCopy.ctaLabel}
         <ArrowRightIcon className="size-3.5" />
-      </Button>
+      </a>
     </div>
   )
 }

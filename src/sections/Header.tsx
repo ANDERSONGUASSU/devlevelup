@@ -110,7 +110,7 @@ export function Header({ className }: HeaderProps) {
             rel="noreferrer"
             className="hidden h-10 items-center rounded-lg bg-arcade-cyan px-3 font-sans text-sm font-semibold text-arcade-950 shadow-arcade-badge transition-colors hover:bg-arcade-secondary md:inline-flex md:px-5 md:py-2.5"
           >
-            {'Apoiar a partir de R$ 2,00'}
+            {'Apoie a partir de R$ 2'}
           </a>
           <button
             ref={toggleRef}

@@ -1,7 +1,6 @@
 import {
   ArrowRightIcon,
   DiscordIcon,
-  ExternalLinkIcon,
   GitHubIcon,
   WhatsAppIcon,
 } from '../ui/icons'
@@ -40,7 +39,6 @@ export function FooterSocial({ className }: FooterSocialProps) {
                 >
                   <Icon className="size-3.5" />
                   {link.label}
-                  <ExternalLinkIcon className="size-3" />
                 </a>
               </li>
             )

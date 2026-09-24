@@ -1,5 +1,4 @@
 import type { FooterColumn } from '../../data/footer'
-import { ExternalLinkIcon } from '../ui/icons'
 import { cn } from '../../lib/utils'
 
 interface FooterLinkColumnProps {
@@ -23,7 +22,6 @@ export function FooterLinkColumn({ column, className }: FooterLinkColumnProps) {
               className="inline-flex items-center gap-1 font-sans text-sm font-medium text-arcade-footer-text transition-colors hover:text-arcade-cyan"
             >
               {link.label}
-              {link.external && <ExternalLinkIcon className="size-3.5" />}
             </a>
           </li>
         ))}

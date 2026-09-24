@@ -2,6 +2,7 @@ import { LevelUpPath } from '../components/levelup/LevelUpPath'
 import { Glow } from '../components/ui/Glow'
 import { Reveal } from '../components/ui/Reveal'
 import { SectionHeader } from '../components/ui/SectionHeader'
+import { Starfield } from '../components/ui/Starfield'
 import { levelUpCopy } from '../data/levelup'
 import { cn } from '../lib/utils'
 

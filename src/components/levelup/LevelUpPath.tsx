@@ -99,7 +99,7 @@ export function LevelUpPath({ className }: LevelUpPathProps) {
       <ol
         ref={trackRef}
         onScroll={updateScrollState}
-        className="relative flex w-full items-center gap-6 overflow-x-auto px-[calc(50%_-_min(31vw,8rem))] py-6 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex-wrap lg:items-stretch lg:justify-center lg:gap-2 lg:overflow-visible lg:px-0 lg:py-0 lg:snap-none"
+        className="relative flex w-full items-center gap-6 overflow-x-auto px-[calc(50%-min(31vw,8rem))] py-6 snap-x snap-mandatory scrollbar-none [&::-webkit-scrollbar]:hidden lg:flex-wrap lg:items-stretch lg:justify-center lg:gap-2 lg:overflow-visible lg:px-0 lg:py-0 lg:snap-none"
       >
         {levelUpCopy.levels.map((level, index) => {
           const unlocked = index < unlockedCount

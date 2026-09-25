@@ -15,6 +15,8 @@ interface HeaderProps {
   className?: string
 }
 
+const HEADER_OFFSET = 96
+
 export function Header({ className }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef<HTMLElement | null>(null)
@@ -47,16 +49,20 @@ export function Header({ className }: HeaderProps) {
     toggleRef.current?.focus()
   }
 
-  const handleMobileNavClick = (href: string) => {
-    closeMenu()
+  const handleNavClick = (href: string) => {
     if (!href.startsWith('#')) return
 
-    const id = href.slice(1)
-    requestAnimationFrame(() => {
-      const target = document.getElementById(id)
-      target?.scrollIntoView({ behavior: 'smooth' })
-      target?.focus({ preventScroll: true })
-    })
+    const target = document.getElementById(href.slice(1))
+    if (!target) return
+
+    const top =
+      target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+
+  const handleMobileNavClick = (href: string) => {
+    closeMenu()
+    requestAnimationFrame(() => handleNavClick(href))
   }
 
   return (
@@ -88,6 +94,10 @@ export function Header({ className }: HeaderProps) {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(event) => {
+                  event.preventDefault()
+                  handleNavClick(link.href)
+                }}
                 aria-current={isActive ? 'true' : undefined}
                 className={cn(
                   'relative font-sans text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-arcade-cyan after:transition-opacity',
@@ -144,7 +154,10 @@ export function Header({ className }: HeaderProps) {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => handleMobileNavClick(link.href)}
+                    onClick={(event) => {
+                      event.preventDefault()
+                      handleMobileNavClick(link.href)
+                    }}
                     aria-current={isActive ? 'true' : undefined}
                     className={cn(
                       'relative font-sans text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-arcade-cyan after:transition-opacity',

@@ -2,6 +2,7 @@ import {
   ArrowRightIcon,
   DiscordIcon,
   GitHubIcon,
+  GlobeIcon,
   WhatsAppIcon,
 } from '../ui/icons'
 import { siteConfig } from '../../config'
@@ -13,6 +14,7 @@ interface FooterSocialProps {
 }
 
 const socialIcons = {
+  site: GlobeIcon,
   discord: DiscordIcon,
   whatsapp: WhatsAppIcon,
   github: GitHubIcon,

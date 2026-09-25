@@ -10,7 +10,6 @@ import { LevelUp } from './sections/LevelUp'
 import { PowerUp } from './sections/PowerUp'
 import { Squad } from './sections/Squad'
 import { Voices } from './sections/Voices'
-import { Reveal } from './components/ui/Reveal'
 
 export default function App() {
   const prefersReducedMotion = usePrefersReducedMotion()

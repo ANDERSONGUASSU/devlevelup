@@ -7,7 +7,7 @@ export interface FooterLink {
 }
 
 export interface SocialLink extends FooterLink {
-  icon: 'discord' | 'whatsapp' | 'github'
+  icon: 'site' | 'discord' | 'whatsapp' | 'github'
 }
 
 export interface FooterColumn {
@@ -35,6 +35,7 @@ export const footerColumns: FooterColumn[] = [
 ]
 
 export const socialLinks: SocialLink[] = [
+  { label: 'Website', href: siteConfig.links.site, icon: 'site' },
   { label: 'Discord', href: siteConfig.links.discord, icon: 'discord' },
   { label: 'WhatsApp', href: siteConfig.links.whatsapp, icon: 'whatsapp' },
   { label: 'GitHub', href: siteConfig.links.github, icon: 'github' },

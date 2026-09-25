@@ -2,6 +2,7 @@ import {
   ArrowRightIcon,
   DiscordIcon,
   GitHubIcon,
+  GlobeIcon,
   WhatsAppIcon,
 } from '../ui/icons'
 import { Button } from '../ui/Button'
@@ -14,6 +15,7 @@ interface FooterSocialProps {
 }
 
 const socialIcons = {
+  site: GlobeIcon,
   discord: DiscordIcon,
   whatsapp: WhatsAppIcon,
   github: GitHubIcon,

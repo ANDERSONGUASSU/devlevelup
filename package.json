@@ -1,7 +1,14 @@
 {
   "name": "devlevelup",
+  "description": "Landing page 16 bits (dark arcade) do DevLevelUp — campanha via Apoia.se, Hackathon SouJunior.",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://devlevelup-puce.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fesqueira/devlevelup.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
